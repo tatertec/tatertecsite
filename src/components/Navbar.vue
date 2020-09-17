@@ -1,7 +1,7 @@
 <template>
   <div class="row bg-warning sticky-top">
     <div class="col-12">
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar-light text-dark">
         <button
           class="navbar-toggler"
           type="button"
@@ -43,7 +43,7 @@
             </li>
           </ul>
           <div>
-            <img class="d-inline" src="../assets/Logo.svg" height="30px" alt />
+            <!-- <img class="d-inline" src="../assets/Logo.svg" height="30px" alt /> -->
             <h5 class="d-inline p-0 m-0 px-3">Concrete Digital Solutions</h5>
           </div>
         </div>

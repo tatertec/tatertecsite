@@ -5,7 +5,7 @@
         <div class="col-12 col-md-3 py-4 col-sm-6">
           <div class="text-center">
             <h5 class="text-info">CONTACT</h5>
-            <div>Phone 208-888-8888</div>
+            <div>Phone 208-695-4231</div>
             <div>Email papa@gmail.com</div>
           </div>
         </div>

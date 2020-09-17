@@ -1,31 +1,33 @@
 <template>
-  <div class="col-12">
+  <div class="col-12 p-0">
     <div class="row">
       <div class="col-12">
-        <h1>About</h1>
+        <h1 class="text-center text-primary py-5">Meet our team</h1>
       </div>
 
-      <div class="col-12 ">
-        <h2>We love what we do.</h2>
-        <!-- <img class="img-fluid" src="../assets/AboutPhoto1.jpg" alt /> -->
-        <div class="p-2">
-          <h4>Founded in 2002 by jim bob.</h4>
-          <p>
-            et out to disrupt the building world. Lorem ipsum dolor sit, amet
-            consectetur adipisicing el
-          </p>
-          <h4>No job to big or to small</h4>
-          <p>
-            One call we do it all from small home projects to large scale
-            manufacturing
-          </p>
-          <h4>Specializing in building</h4>
-          <p>
-            We like to build Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Ipsum voluptatem veritatis, corporis a magni numquam qui
-            repellat offici
-          </p>
+      <div class="col-12 bg-dark text-primary py-4 col-md-6 p-0">
+        <div class="text-center bg-dark text-primary py-4 employee-card border-right">
+          <h2>Ryan Harmon</h2>
+          <img class="employee-photo my-3" src="https://placehold.it/500x400" alt />
+          <h4>Founder</h4>
+          <p
+            class="text-left text-light"
+          >We started concrete digital solutions to help people help people grow there local business using digital platforms and tools. It is our dream to see local business owners thrive in Idaho as a result of our hard work.</p>
         </div>
+      </div>
+      <div class="col-12 bg-dark text-primary py-4 col-md-6 p-0">
+        <div class="text-center bg-dark text-primary py-4 employee-card border-left">
+          <h2>Justin Gates</h2>
+          <img class="employee-photo my-3" src="https://placehold.it/500x400" alt />
+          <h4>Software Engineer</h4>
+          <p
+            class="text-left text-light"
+          >l s Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit earum consequatur nesciunt id aspernatur eligendi alias laudantium, impedit nihil maiores ut ratione fugiat enim dolor nobis odio labore exercitationem nemo?</p>
+        </div>
+      </div>
+      <div class="col-12 py-4 text-center">
+        <h2 class="text-primary">Our mission</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem molestiae rerum quidem cupiditate architecto aut sed repudiandae repellendus? Molestiae error ut sapiente aliquam ab autem porro inventore sit perspiciatis nam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur quidem libero esse eveniet reprehenderit? Nesciunt, consequatur eum asperiores nobis id libero dolorem minus corporis accusantium laboriosam eos, aliquid ab.</p>
       </div>
     </div>
   </div>
@@ -38,4 +40,20 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.employee-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+.employee-card {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.border-right {
+  border-right: 1px solid white;
+}
+.border-left {
+  border-left: 1px solid white;
+}
+</style>

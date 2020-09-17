@@ -38,6 +38,9 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Bebas Neue", cursive;
+}
+body {
   font-family: "Nanum Gothic", sans-serif;
 }
 

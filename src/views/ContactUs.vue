@@ -2,10 +2,10 @@
   <div class="col-12">
     <div class="row">
       <div class="col-12">
-        <h1>Contact us</h1>
+        <h1 class="text-center text-primary py-5">Give us a call today</h1>
       </div>
-      <div class="col-md-6 ">
-        <form class="text-left p-2 form-box card bg-light shadow m-auto ">
+      <div class="col-md-6">
+        <!-- <form class="text-left p-2 form-box card bg-light shadow m-auto ">
           <h2>Send us a message.</h2>
           <label class="label" for="name">Name</label>
           <input class="w-100" type="text" />
@@ -20,15 +20,16 @@
           >
             Submit
           </button>
-        </form>
+        </form>-->
       </div>
-      <div class="col-md-6  ">
-        <h4>Technical help: 208-695-4231</h4>
-        <h4>Sales: 208-695-4231</h4>
-        <button class="btn btn-info text-light btn-outline-success">
-          Email
-        </button>
-        <h4 class="d-inline pl-2">email.dev@gmail.com</h4>
+      <div class="col-md-12 py-5 px-5">
+        <h4 class="text-primary">Sales</h4>
+        <h5>Phone: 208-695-423</h5>
+        <h5>E-mail: justingates.dev@gmail.com</h5>
+        <br />
+        <h4 class="text-primary">Technical help</h4>
+        <h5>Phone: 208-695-423</h5>
+        <h5>E-mail: justingates.dev@gmail.com</h5>
       </div>
     </div>
   </div>

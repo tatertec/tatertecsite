@@ -5,8 +5,8 @@
         <h1 class="text-center text-primary py-5">More than web design</h1>
       </div>
     </div>
-    <div class="row">
-      <div class="p-0 col-12 col-lg-6 py-4 bg-dark text-light">
+    <div class="row bg-dark">
+      <div class="p-0 col-12 col-lg-6 py-4 text-light">
         <h3 class="text-primary p-2 m-0">Seo</h3>
         <p
           class="px-3 m-0"
@@ -21,26 +21,62 @@
           class="px-3 m-0"
         >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id ad dolore at voluptatum ipsum animi incidunt assumenda recusandae</p>
       </div>
-      <div class="p-0 col-12 col-lg-6 bg-dark text-light">
+      <div class="p-0 col-12 col-lg-6 text-light">
         <h3 class="text-primary p-2 py-lg-4 m-0">Marketing plan talored to your bussiness</h3>
         <p
           class="px-3 m-0"
         >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id ad dolore at voluptatum ipsum animi incidunt assumenda recusandae</p>
-        <div class="pos-rel pt-4 m-auto">
+        <div class="pos-rel p-0 pt-lg-4 m-auto">
           <div class="d-flex justify-content-center">
-            <img class="img-fluid img-1 p-2 p-lg-4" src="https://placehold.it/500x400" alt />
+            <img class="drop-img img-1 mx-2 mx-lg-4 shadow" src="https://placehold.it/500x400" alt />
           </div>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-12 col-lg-6 spacer-top-1">
-        <img class="img-fluid" src="https://placehold.it/500x400" alt />
+      <div
+        class="col-12 col-lg-6 spacer-top-1 d-flex justify-content-center py-4 order-2 order-lg-1"
+      >
+        <img class="img-fluid shadow" src="https://placehold.it/500x400" alt />
       </div>
-      <div class="spacer-top-2 col-12 col-lg-6">
+      <div class="spacer-top-2 col-12 col-lg-6 order-1 order-lg-2">
         <h3>Cementing your digital precence</h3>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo hic recusandae esse maiores qui cum quae distinctio reprehenderit. Doloremque fuga ipsa quas sed enim inventore aliquid nesciunt quae quaerat ipsum?</p>
+      </div>
+    </div>
+    <div class="row bg-secondary py-3 my-3">
+      <div class="col-lg-6 col-12">
+        <form class="d-flex justify-content-center align-items-center p-4">
+          <div class="ml-5 bg-dark shadow text-primary form-container">
+            <h4>Get in touch</h4>
+            <label class="m-0 pt-2 text-light">Name</label>
+            <br />
+            <input class="p-1 w-100" type="text" />
+            <br />
+            <label class="m-0 pt-2 text-light">E-mail</label>
+            <br />
+            <input class="p-1 w-100" type="text" />
+            <br />
+            <label class="m-0 pt-2 text-light">E-mail</label>
+            <br />
+            <textarea class="p-1 w-100" rows="5"></textarea>
+            <br />
+            <button class="btn btn-primary mt-3 px-5">Join</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-6 col-12">
+        <form class="d-flex justify-content-center align-items-center p-4">
+          <div class="ml-5 text-primary form-container bg-dark shadow">
+            <h4>Join our e-mail list</h4>
+            <label class="text-light">E-mail</label>
+            <br />
+            <input class="p-1 w-100" type="text" />
+            <br />
+            <button class="btn btn-primary mt-3 px-5">Join</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -56,6 +92,11 @@ export default {
 </script>
 
 <style>
+.form-container {
+  width: 500px;
+
+  padding: 2rem;
+}
 .pos-rel {
   position: relative;
 }
@@ -64,18 +105,19 @@ export default {
   top: 100px;
 }
 
-.spacer-top-1 {
-  padding-top: 50px;
-}
 .spacer-top-2 {
-  padding-top: 300px;
+  padding-top: 350px;
 }
-@media only screen and (max-width: 942px) {
-  .spacer-top-1 {
-    padding: 0.5rem;
+@media only screen and (max-width: 992px) {
+  .drop-img {
+    max-height: 300px;
   }
   .img-1 {
+    top: 0.7rem;
     position: relative;
+  }
+  .spacer-top-2 {
+    padding-top: 2rem;
   }
 }
 </style>

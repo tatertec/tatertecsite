@@ -1,34 +1,56 @@
 <template>
-  <div class="col-12">
+  <div class="col-12 p-0">
     <div class="row">
       <div class="col-12">
-        <h1>Our Work</h1>
+        <h1 class="text-center text-primary py-5">Our Work</h1>
       </div>
+      <div class="row bg-dark text-light py-5 p-2 p-lg-5">
+        <div class="col-12 col-md-6">
+          <div class="px-3 d-flex align-items-center flex-column">
+            <div>
+              <h2 class="text-primary m-0">Company name</h2>
+              <p class="px-3">
+                Desctiption Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Facilis incidunt rerum suscipit dolor, sunt ea! Rem natus, non
+                consequatur quaerat molli
+              </p>
+            </div>
+            <div class="py-3">
+              <button class="btn btn-primary px-5">View Site</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 text-center">
+          <img class="img-fluid p-lg-4 p-2" src="https://placehold.it/400x300" alt />
+        </div>
+        <div class="col-12">
+          <hr class="bg-light text-light" />
+        </div>
 
-      <div class="col-12 col-md-6">
-        <h2>Main title</h2>
-        <!-- <img class="img-fluid" src="../assets/portfolio1.jpg" alt /> -->
-        <h4>Job title / location / type of work</h4>
-        <p>
-          Desctiption Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Facilis incidunt rerum suscipit dolor, sunt ea! Rem natus, non
-          consequatur quaerat molli
-        </p>
-      </div>
-
-      <div class="col-12 col-md-6">
-        <h2>Main title</h2>
-        <!-- <img class="img-fluid" src="../assets/portfolio2.jpg" alt /> -->
-        <h4>Job title / location /type of work</h4>
-        <p>
-          Desctiption Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Facilis incidunt rerum suscipit dolor, sunt ea! Rem natus, non
-          consequatur quaerat molli
-        </p>
+        <div class="col-12 col-md-6">
+          <div class="px-3 d-flex align-items-center flex-column">
+            <div>
+              <h2 class="text-primary m-0">Company name</h2>
+              <p class="px-3">
+                Desctiption Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Facilis incidunt rerum suscipit dolor, sunt ea! Rem natus, non
+                consequatur quaerat molli
+              </p>
+            </div>
+            <div class="py-3">
+              <button class="btn btn-primary px-5">View Site</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 text-center">
+          <img class="img-fluid p-lg-4 p-2" src="https://placehold.it/400x300" alt />
+        </div>
       </div>
     </div>
-    <div class="col-12">
-      <!-- <ServiceComp /> -->
+    <div class="row">
+      <div class="col-12">
+        <hr class="bg-light text-light" />
+      </div>
     </div>
   </div>
 </template>
@@ -43,4 +65,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.border-top {
+  min-height: 5px;
+}
+</style>

@@ -17,13 +17,18 @@
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
               <a class="nav-link" href="#">
-                <router-link to="/">Home</router-link>
+                <router-link to="/">HOME</router-link>
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <router-link to="About">About</router-link>
+                <router-link to="About">ABOUT</router-link>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <router-link to="Portfolio">OUR WORK</router-link>
               </a>
             </li>
             <!-- <li class="nav-item">

@@ -30,8 +30,17 @@
           >l s Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit earum consequatur nesciunt id aspernatur eligendi alias laudantium, impedit nihil maiores ut ratione fugiat enim dolor nobis odio labore exercitationem nemo?</p>
         </div>
       </div>
-      <div class="col-12 py-4 text-center">
+    </div>
+    <div class="row bg-light px-5">
+      <div class="col-12 p-5 text-center">
         <h2 class="text-primary">Our mission</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem molestiae rerum quidem cupiditate architecto aut sed repudiandae repellendus? Molestiae error ut sapiente aliquam ab autem porro inventore sit perspiciatis nam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur quidem libero esse eveniet reprehenderit? Nesciunt, consequatur eum asperiores nobis id libero dolorem minus corporis accusantium laboriosam eos, aliquid ab.</p>
+        <hr />
+      </div>
+    </div>
+    <div class="row bg-light px-5">
+      <div class="col-12 p-5 text-center">
+        <h2 class="text-primary">Our Services</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem molestiae rerum quidem cupiditate architecto aut sed repudiandae repellendus? Molestiae error ut sapiente aliquam ab autem porro inventore sit perspiciatis nam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur quidem libero esse eveniet reprehenderit? Nesciunt, consequatur eum asperiores nobis id libero dolorem minus corporis accusantium laboriosam eos, aliquid ab.</p>
       </div>
     </div>

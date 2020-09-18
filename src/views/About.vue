@@ -6,9 +6,11 @@
       </div>
 
       <div class="col-12 bg-dark text-primary py-4 col-md-6 p-0">
-        <div class="text-center bg-dark text-primary py-4 employee-card border-right">
+        <div class="text-center bg-dark text-primary py-4 employee-card">
           <h2>Ryan Harmon</h2>
-          <img class="employee-photo my-3" src="https://placehold.it/500x400" alt />
+          <div class="employee-photo-container">
+            <img class="employee-photo-2 my-3" src="../assets/Employee2.jpg" alt />
+          </div>
           <h4>Founder</h4>
           <p
             class="text-left text-light"
@@ -18,7 +20,10 @@
       <div class="col-12 bg-dark text-primary py-4 col-md-6 p-0">
         <div class="text-center bg-dark text-primary py-4 employee-card border-left">
           <h2>Justin Gates</h2>
-          <img class="employee-photo my-3" src="https://placehold.it/500x400" alt />
+
+          <div class="employee-photo-container">
+            <img class="employee-photo my-3" src="../assets/Employee1.jpg" alt />
+          </div>
           <h4>Software Engineer</h4>
           <p
             class="text-left text-light"
@@ -42,9 +47,12 @@ export default {
 
 <style>
 .employee-photo {
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
+  height: 400px;
+}
+.employee-photo-2 {
+  height: 200px;
+}
+.employee-photo-container {
 }
 .employee-card {
   padding-right: 2rem;

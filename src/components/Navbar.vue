@@ -28,27 +28,22 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <router-link to="Portfolio">OUR WORK</router-link>
+                <router-link to="Portfolio">PORTFOLIO</router-link>
               </a>
             </li>
-            <!-- <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1"
-            ><router-link to="Services">Services</router-link></a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1"
-            ><router-link to="Portfolio">Portfolio</router-link></a
-          >
-            </li>-->
             <li class="nav-item">
               <a class="nav-link" href="#" tabindex="-1">
-                <router-link to="ContactUs">Contact Us</router-link>
+                <router-link to="Services">SERVICES</router-link>
+              </a>
+            </li>
+            <li class="nav-item"></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1">
+                <router-link to="ContactUs">CONTACT</router-link>
               </a>
             </li>
           </ul>
           <div>
-            <!-- <img class="d-inline" src="../assets/Logo.svg" height="30px" alt /> -->
             <h5 class="d-inline p-0 m-0 px-3">Concrete Digital Solutions</h5>
           </div>
         </div>
@@ -58,6 +53,13 @@
 </template>
 
 <script>
+//on selection nav bar is closed
+$(function () {
+  var navMain = $(".navbar-collapse");
+  navMain.on("click", "a:not([data-toggle])", null, function () {
+    navMain.collapse("hide");
+  });
+});
 export default {};
 </script>
 

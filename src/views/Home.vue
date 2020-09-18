@@ -59,7 +59,7 @@
           Contact us today for a free consoltaion
           <b class="text-dark">208-695-4231</b>
         </p>
-        <!-- <form class="d-flex justify-content-center align-items-center p-4">
+        <form class="d-flex justify-content-center align-items-center p-4">
           <div class="ml-5 bg-dark shadow text-primary form-container">
             <h4>Get in touch</h4>
             <label class="m-0 pt-2 text-light">Name</label>
@@ -88,7 +88,7 @@
             <br />
             <button class="btn btn-primary mt-3 px-5">Join</button>
           </div>
-        </form>-->
+        </form>
       </div>
     </div>
   </div>

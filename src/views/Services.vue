@@ -84,7 +84,7 @@
         <div class="shadow product-card bg-light p-2 m-2">
           <h4 class="m-0 p-2">Site managment tools</h4>
           <div class="m-0 py-2 text-dark">
-            <h5 class="d-inline m-0 p-0">$25</h5>
+            <h5 class="d-inline m-0 p-0">Commeing soon</h5>
             <h6 class="d-inline">/Mo</h6>
           </div>
           <p>Extra tools and fetures. Manage your site with ease. Send emails to customers and more.</p>
@@ -94,7 +94,7 @@
         <div class="shadow product-card bg-light p-2 m-2">
           <h4 class="m-0 p-2">Marketing</h4>
           <div class="m-0 py-2">
-            <h5 class="d-inline m-0 p-0">Starting at $25</h5>
+            <h5 class="d-inline m-0 p-0">Coming soon</h5>
             <h6 class="d-inline">/Mo</h6>
           </div>
           <p>Coming soon were looking for an SEO expert to join our team. We provide an SEO expert to generate leads from search engines.</p>

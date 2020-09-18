@@ -13,8 +13,8 @@
           </div>
           <h4>Founder</h4>
           <p
-            class="text-left text-light"
-          >We started concrete digital solutions to help people help people grow there local business using digital platforms and tools. It is our dream to see local business owners thrive in Idaho as a result of our hard work.</p>
+            class="text-light"
+          >Ryan is a hard-working businessman. His passion for starting and growing companies drives him to help others succeed</p>
         </div>
       </div>
       <div class="col-12 bg-dark text-primary py-4 col-md-6 p-0">
@@ -26,22 +26,16 @@
           </div>
           <h4>Software Engineer</h4>
           <p
-            class="text-left text-light"
-          >l s Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit earum consequatur nesciunt id aspernatur eligendi alias laudantium, impedit nihil maiores ut ratione fugiat enim dolor nobis odio labore exercitationem nemo?</p>
+            class="text-light"
+          >Passionate about solving real-world problems and taking on a challenge</p>
         </div>
       </div>
     </div>
     <div class="row bg-light px-5">
       <div class="col-12 p-5 text-center">
-        <h2 class="text-primary">Our mission</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem molestiae rerum quidem cupiditate architecto aut sed repudiandae repellendus? Molestiae error ut sapiente aliquam ab autem porro inventore sit perspiciatis nam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur quidem libero esse eveniet reprehenderit? Nesciunt, consequatur eum asperiores nobis id libero dolorem minus corporis accusantium laboriosam eos, aliquid ab.</p>
+        <h2 class="text-primary">Our mission is simple</h2>
+        <p>We started concrete digital solutions to help business owners create a digital presence and grow there company.</p>
         <hr />
-      </div>
-    </div>
-    <div class="row bg-light px-5">
-      <div class="col-12 p-5 text-center">
-        <h2 class="text-primary">Our Services</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem molestiae rerum quidem cupiditate architecto aut sed repudiandae repellendus? Molestiae error ut sapiente aliquam ab autem porro inventore sit perspiciatis nam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora tenetur quidem libero esse eveniet reprehenderit? Nesciunt, consequatur eum asperiores nobis id libero dolorem minus corporis accusantium laboriosam eos, aliquid ab.</p>
       </div>
     </div>
   </div>
@@ -61,8 +55,7 @@ export default {
 .employee-photo-2 {
   height: 200px;
 }
-.employee-photo-container {
-}
+
 .employee-card {
   padding-right: 2rem;
   padding-left: 2rem;

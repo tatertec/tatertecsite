@@ -1,12 +1,14 @@
 <template>
-  <div class="col-12">
+  <div class="col-12 p-0">
     <div class="row">
       <div class="col-12">
         <h1 class="text-center text-primary py-5">Give us a call today</h1>
       </div>
-      <div class="col-md-6">
-        <!-- <form class="text-left p-2 form-box card bg-light shadow m-auto ">
-          <h2>Send us a message.</h2>
+    </div>
+    <div class="row bg-secondary py-5">
+      <div class="col-md-6 col-12 p-0">
+        <form class="text-left p-2 form-box card bg-dark text-light shadow m-auto">
+          <h2 class="text-primary">Send us a message.</h2>
           <label class="label" for="name">Name</label>
           <input class="w-100" type="text" />
           <br />
@@ -15,14 +17,10 @@
           <br />
           <label class="label" for="name">Message</label>
           <textarea class="w-100" type="text" rows="8" />
-          <button
-            class="btn btn-outline-success btn-info text-light mt-5 py-2 my-4 "
-          >
-            Submit
-          </button>
-        </form>-->
+          <button class="btn btn-info text-light mt-5 py-2 my-4">Submit</button>
+        </form>
       </div>
-      <div class="col-md-12 py-5 px-5">
+      <div class="col-md-6 col-12 py-5 px-5">
         <h4 class="text-primary">Sales</h4>
         <h5>Phone: ...</h5>
         <h5>E-mail: justingates.dev@gmail.com</h5>

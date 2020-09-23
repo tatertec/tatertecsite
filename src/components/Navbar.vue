@@ -42,9 +42,14 @@
                 <router-link to="ContactUs">CONTACT</router-link>
               </a>
             </li>
-            <li class="nav-item">
+            <li v-if="$auth.isAuthenticated" class="nav-item">
               <a class="nav-link" href="#">
                 <router-link to="Dashboard">DASHBOARD</router-link>
+              </a>
+            </li>
+            <li v-else class="nav-item">
+              <a class="nav-link" href="#">
+                <router-link to="Dashboard">LOGIN</router-link>
               </a>
             </li>
           </ul>
@@ -59,9 +64,9 @@
 
 <script>
 //on selection nav bar is closed
-$(function() {
+$(function () {
   var navMain = $(".navbar-collapse");
-  navMain.on("click", "a:not([data-toggle])", null, function() {
+  navMain.on("click", "a:not([data-toggle])", null, function () {
     navMain.collapse("hide");
   });
 });

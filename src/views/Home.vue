@@ -56,12 +56,8 @@
     </div>
     <div class="row bg-secondary py-3 my-3">
       <div class="col-lg-6 col-12">
-        <p>
-          Call us today for a free consoltaion.
-          <b class="text-dark">208-695-4231</b>
-        </p>
         <form class="d-flex justify-content-center align-items-center p-4">
-          <!-- <div class="ml-5 bg-dark shadow text-primary form-container">
+          <div class="ml-5 bg-dark shadow text-primary form-container">
             <h4>Get in touch</h4>
             <label class="m-0 pt-2 text-light">Name</label>
             <br />
@@ -76,11 +72,11 @@
             <textarea class="p-1 w-100" rows="5"></textarea>
             <br />
             <button class="btn btn-primary mt-3 px-5">Join</button>
-          </div>-->
+          </div>
         </form>
       </div>
       <div class="col-lg-6 col-12">
-        <!-- <form class="d-flex justify-content-center align-items-center p-4">
+        <form class="d-flex justify-content-center align-items-center p-4">
           <div class="ml-5 text-primary form-container bg-dark shadow">
             <h4>Join our e-mail list</h4>
             <label class="text-light">E-mail</label>
@@ -89,7 +85,7 @@
             <br />
             <button class="btn btn-primary mt-3 px-5">Join</button>
           </div>
-        </form>-->
+        </form>
       </div>
     </div>
   </div>

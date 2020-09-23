@@ -15,10 +15,15 @@ let api = Axios.create({
 export default new Vuex.Store({
   state: {
     profile: {},
+    user: {},
   },
+
   mutations: {
     setProfile(state, profile) {
       state.profile = profile;
+    },
+    setUser(state, data) {
+      state.user = data;
     },
   },
   actions: {
@@ -27,6 +32,15 @@ export default new Vuex.Store({
     },
     resetBearer() {
       api.defaults.headers.authorization = "";
+    },
+    async getUser({ commit, dispatch }) {
+      try {
+        let res = await api.get("user");
+        console.log(res.data);
+        commit("setProfile", res.data);
+      } catch (error) {
+        console.error(error);
+      }
     },
     async getProfile({ commit }) {
       try {

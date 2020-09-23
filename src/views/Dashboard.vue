@@ -16,7 +16,8 @@
       </div>
 
       <div class="col-12 bg-secondary py-3 d-flex justify-content-between align-items-center">
-        <div>
+        <div class="d-flex align-items-center">
+          <img class="profile-img" :src="$auth.userInfo.picture" alt="user-profile-image" />
           <div class="dropdown mr-1">
             <button
               type="button"
@@ -28,24 +29,26 @@
               data-offset="0,0"
             >Toolbox</button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-              <span @click="SetToolManagePortfolio" class="action dropdown-item">Portfolio</span>
-              <span @click="SetToolManageSale" class="action dropdown-item">Sale</span>
-              <span @click="SetToolManageContent" class="action dropdown-item">Content</span>
+              <!-- <span @click="SetToolManagePortfolio" class="action dropdown-item">Portfolio</span> -->
+              <!-- <span @click="SetToolManageSale" class="action dropdown-item">Sale</span> -->
+              <!-- <span @click="SetToolManageContent" class="action dropdown-item">Content</span> -->
+              <span @click="getMessages" class="action dropdown-item">Messages</span>
             </div>
           </div>
-          <img :src="$auth.userinfo.picture" alt />
         </div>
 
         <div class>
           <span class="action" @click="logout">logout</span>
         </div>
       </div>
-
+      <div class="col-12 p-2 bg-secondary">
+        <message v-for="message in messages" :key="message.id" :message="message" />
+      </div>
       <div
         v-if="editPortfolio"
         class="col-12 col-lg-7 col-md-9 col-sm-11 py-5 m-auto p-0 text-center"
       >
-        <p>{{$auth.user}}</p>
+        <p>{{$auth.userInfo.email}}</p>
         <button class="btn btn-dark text-light my-3 p-3 px-5">
           <h3 class="m-0 p-0">
             <i class="fas fa-camera"></i>
@@ -66,6 +69,7 @@
 </template>
 
 <script>
+import Message from "../components/Message";
 $(function () {
   var navMain = $(".navbar-collapse");
   navMain.on("click", "a:not([data-toggle])", null, function () {
@@ -75,10 +79,16 @@ $(function () {
 export default {
   data() {
     return {
-      editPortfolio: true,
+      editPortfolio: false,
+      showMessages: true,
+      sale: false,
+      content: false,
     };
   },
   computed: {
+    messages() {
+      return this.$store.state.messages;
+    },
     profile() {
       return this.$store.state.profile;
     },
@@ -88,16 +98,22 @@ export default {
   },
 
   methods: {
+    async SetToolManagerPortfolio() {},
+    async getMessages() {
+      this.$store.dispatch("getMessages");
+    },
     async login() {
       await this.$auth.loginWithPopup();
       this.$store.dispatch("setBearer", this.$auth.bearer);
-      await this.$store.dispatch("getProfile");
-      this.$store.dispatch("getUser");
+      this.$store.dispatch("getProfile");
     },
     async logout() {
       this.$store.dispatch("resetBearer");
       await this.$auth.logout({ returnTo: window.location.origin });
     },
+  },
+  components: {
+    Message,
   },
 };
 </script>
@@ -126,7 +142,7 @@ export default {
 .preview-img {
   width: 100%;
 }
-.dashboardlogo {
+.profile-img {
   height: 5rem;
   width: 5rem;
   padding: 0.5rem;

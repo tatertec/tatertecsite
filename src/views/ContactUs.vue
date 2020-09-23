@@ -7,7 +7,7 @@
     </div>
     <div class="row bg-secondary py-5">
       <div class="col-md-6 col-12 p-0">
-        <form class="text-left p-2 form-box card bg-dark text-light shadow m-auto">
+        <form class="text-left p-2 form-box card bg-dark text-light shadow m-auto p-1">
           <h2 class="text-primary">Send us a message.</h2>
           <label class="label" for="name">Name</label>
           <input class="w-100" type="text" />

@@ -16,14 +16,16 @@ export default new Vuex.Store({
   state: {
     profile: {},
     user: {},
+    messages: [],
   },
 
   mutations: {
-    setProfile(state, profile) {
-      state.profile = profile;
+    setProfile(state, profileData) {
+      state.profile = profileData;
     },
-    setUser(state, data) {
-      state.user = data;
+
+    setMessages(state, messages) {
+      state.messages = messages;
     },
   },
   actions: {
@@ -33,19 +35,42 @@ export default new Vuex.Store({
     resetBearer() {
       api.defaults.headers.authorization = "";
     },
-    async getUser({ commit, dispatch }) {
+    async getProfile({ commit }) {
       try {
-        let res = await api.get("user");
-        console.log(res.data);
+        let res = await api.get("profile");
         commit("setProfile", res.data);
       } catch (error) {
         console.error(error);
       }
     },
-    async getProfile({ commit }) {
+
+    //TODO add this to my other client side templates
+
+    async sendMessage({}, data) {
+      console.log("sending message");
       try {
-        let res = await api.get("profile");
-        commit("setProfile", res.data);
+        let res = await api.post("messages", data);
+        console.log(res.data);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    async getMessages({ commit }) {
+      try {
+        let res = await api.get("messages");
+        console.log(res.data);
+        commit("setMessages", res.data);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+
+    //TODO add the logic and server stuff for this
+    async addToEmailList({}, email) {
+      try {
+        //NOTE emailList is not a route yet
+        let res = await api.post("emailList", email);
+        console.log(res.data);
       } catch (error) {
         console.error(error);
       }

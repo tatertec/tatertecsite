@@ -67,15 +67,15 @@
           <p>We design,build, Create SEO focused content, and host your site.</p>
         </div>
       </div>
-      <!-- <div class="col-12 col-lg-4">
+      <div class="col-12 col-lg-4">
         <div class="shadow product-card bg-light p-2 m-2">
-          <h4 class=" m-0 p-2">ADVANCED SEO</h4>
+          <h4 class="m-0 p-2">ADVANCED SEO</h4>
           <div class="d-flex justify-content-between m-0 py-2">
             <h5 class="d-inline m-0 p-0">Starting at $1000</h5>
           </div>
           <p>Coming soon were looking for an SEO expert to join our team. We provide an SEO expert to generate leads from search engines.</p>
         </div>
-      </div>-->
+      </div>
       <div class="col-12">
         <hr class="bg-dark" />
         <h2>Tools and Marketing</h2>

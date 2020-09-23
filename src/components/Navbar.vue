@@ -42,6 +42,16 @@
                 <router-link to="ContactUs">CONTACT</router-link>
               </a>
             </li>
+            <li v-if="$auth.isAuthenticated" class="nav-item">
+              <a class="nav-link" href="#">
+                <router-link to="Dashboard">DASHBOARD</router-link>
+              </a>
+            </li>
+            <li v-else class="nav-item">
+              <a class="nav-link" href="#">
+                <router-link to="Dashboard">LOGIN</router-link>
+              </a>
+            </li>
           </ul>
           <div>
             <h5 class="d-inline p-0 m-0 px-3">Concrete Digital Solutions</h5>
@@ -60,7 +70,9 @@ $(function () {
     navMain.collapse("hide");
   });
 });
-export default {};
+export default {
+  methods: {},
+};
 </script>
 
 <style></style>

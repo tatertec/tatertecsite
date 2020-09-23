@@ -55,41 +55,41 @@
       </div>
     </div>
     <div class="row bg-secondary py-3 my-3">
-      <div class="col-lg-6 col-12">
-        <p>
-          Call us today for a free consoltaion.
-          <b class="text-dark">208-695-4231</b>
-        </p>
-        <form class="d-flex justify-content-center align-items-center p-4">
-          <!-- <div class="ml-5 bg-dark shadow text-primary form-container">
+      <div class="col-lg-6 col-12 p-0">
+        <form class="d-flex justify-content-center align-items-center p-lg-4">
+          <div class="bg-dark shadow text-primary form-container">
             <h4>Get in touch</h4>
             <label class="m-0 pt-2 text-light">Name</label>
             <br />
-            <input class="p-1 w-100" type="text" />
+            <input v-model="senderName" class="p-1 w-100" type="text" />
             <br />
             <label class="m-0 pt-2 text-light">E-mail</label>
             <br />
-            <input class="p-1 w-100" type="text" />
+            <input v-model="senderEmail" class="p-1 w-100" type="text" />
+            <br />
+            <label class="m-0 pt-2 text-light">Phone number</label>
+            <br />
+            <input v-model="senderPhoneNumber" class="p-1 w-100" type="text" />
             <br />
             <label class="m-0 pt-2 text-light">E-mail</label>
             <br />
-            <textarea class="p-1 w-100" rows="5"></textarea>
+            <textarea v-model="body" class="p-1 w-100" rows="5"></textarea>
             <br />
-            <button class="btn btn-primary mt-3 px-5">Join</button>
-          </div>-->
+            <button @click="submitMessageForm" class="btn btn-primary mt-3 px-5">Send message</button>
+          </div>
         </form>
       </div>
-      <div class="col-lg-6 col-12">
-        <!-- <form class="d-flex justify-content-center align-items-center p-4">
-          <div class="ml-5 text-primary form-container bg-dark shadow">
+      <div class="col-lg-6 col-12 p-0">
+        <form class="d-flex justify-content-center align-items-center py-4 p-lg-4">
+          <div class="text-primary form-container bg-dark shadow">
             <h4>Join our e-mail list</h4>
             <label class="text-light">E-mail</label>
             <br />
-            <input class="p-1 w-100" type="text" />
+            <input v-model="clubEmail" class="p-1 w-100" type="text" />
             <br />
-            <button class="btn btn-primary mt-3 px-5">Join</button>
+            <button @click="addToEmailList" class="btn btn-primary mt-3 px-5">Join</button>
           </div>
-        </form>-->
+        </form>
       </div>
     </div>
   </div>
@@ -100,6 +100,32 @@ import Services from "../components/ServicesComp";
 
 export default {
   name: "Home",
+
+  data() {
+    return {
+      //note form data
+      senderName: "",
+      senderEmail: "",
+      senderPhoneNumber: "",
+      body: "",
+      //note email list data
+      clubEmail: "",
+    };
+  },
+
+  methods: {
+    submitMessageForm() {
+      let data = {
+        senderName: this.senderName,
+        senderEmail: this.senderEmail,
+        senderPhoneNumber: this.senderPhoneNumber,
+        body: this.body,
+      };
+      this.$store.dispatch("sendMessage", data);
+    },
+    addToEmailList() {},
+  },
+
   components: {},
 };
 </script>

@@ -47,9 +47,11 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12">
-        <hr class="bg-light text-light" />
+    <div class="row py-5 text-center">
+      <div class="col-lg-8 m-auto col-12">
+        <h4>Your satisfaction is guaranteed</h4>
+        <p class="p-2">We will tweak your site until it is just the way you like it</p>
+        <hr />
       </div>
     </div>
   </div>

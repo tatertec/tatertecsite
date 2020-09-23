@@ -5,7 +5,7 @@ import About from "../views/About.vue";
 import Services from "../views/Services.vue";
 import Portfolio from "../views/Portfolio.vue";
 import ContactUs from "../views/ContactUs.vue";
-
+import Dashboard from "../views/Dashboard.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -33,6 +33,11 @@ const routes = [
     path: "/contactUs",
     name: "ContactUs",
     component: ContactUs,
+  },
+  {
+    path: "/dashboard",
+    name: "Dashboard",
+    component: Dashboard,
   },
 ];
 

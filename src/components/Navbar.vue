@@ -54,7 +54,7 @@
             </li>
           </ul>
           <div>
-            <h5 class="d-inline p-0 m-0 px-3">Concrete Digital Solutions</h5>
+            <h5 class="d-inline p-0 m-0 px-3">Tater-Tec</h5>
           </div>
           <img
             v-if="$auth.isAuthenticated"
@@ -70,9 +70,9 @@
 
 <script>
 //on selection nav bar is closed
-$(function() {
+$(function () {
   var navMain = $(".navbar-collapse");
-  navMain.on("click", "a:not([data-toggle])", null, function() {
+  navMain.on("click", "a:not([data-toggle])", null, function () {
     navMain.collapse("hide");
   });
 });

@@ -12,50 +12,63 @@
         </div>
       </div>
     </div>
-    <div v-else class="row bg-secondary ">
+    <div v-else class="row bg-secondary">
       <div class="col-12 p-0 text-center bg-light">
         <h1 class="text-primary h1-anim py-5">Dashboard</h1>
       </div>
 
-      <div class="col-12 bg-secondary py-4 ">
-        <div class="dropdown mr-1">
-          <button
-            type="button"
-            class="btn btn-dark text-light dropdown-toggle"
-            id="dropdownMenuOffset"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-            data-offset="0,0"
-          >
-            MENU
-          </button>
-          <div
-            class="dropdown-menu  p-0 m-0 "
-            aria-labelledby="dropdownMenuOffset"
-          >
-            <span class="action dropdown-item">...</span>
-            <span class="action dropdown-item">...</span>
-            <span class="action dropdown-item">...</span>
-            <span @click="getMessages" class="action dropdown-item"
-              >Messages</span
+      <div class="col-12 bg-secondary p-1">
+        <div class="p-2">
+          <div class="dropdown mr-1">
+            <button
+              type="button"
+              class="btn btn-dark text-light dropdown-toggle"
+              id="dropdownMenuOffset"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-offset="0,0"
             >
-            <hr class="bg-dark p-0 m-0 " />
-            <span class="action dropdown-item text-danger" @click="logout"
-              >logout</span
+              {{ this.activeTool || "MENU" }}
+            </button>
+            <div
+              class="dropdown-menu p-0 m-0"
+              aria-labelledby="dropdownMenuOffset"
             >
+              <span class="action dropdown-item">...</span>
+              <span class="action dropdown-item">...</span>
+              <span class="action dropdown-item">...</span>
+              <span @click="getMessages" class="action dropdown-item"
+                >Messages</span
+              >
+              <hr class="bg-dark p-0 m-0" />
+              <span class="action dropdown-item text-danger" @click="logout"
+                >logout</span
+              >
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-12 bg-secondary p-1 ">
-        <h3 class="px-2">Messages</h3>
+      <div v-if="this.activeTool === 'Messages'">
+        <div v-if="messages.length > 0">
+          <Message
+            v-for="message in messages"
+            :key="message.id"
+            :message="message"
+          />
+        </div>
+        <div >
+          <Loading />
+        </div>
       </div>
-
-      <Message
-        v-for="message in messages"
-        :key="message.id"
-        :message="message"
-      />
+      <div v-if="this.activeTool === 'Portfolio'">
+          <PortfolioManager/>
+          />
+        </div>
+        <div v-else>
+          <Loading />
+        </div>
+      </div>
       <div
         v-if="editPortfolio"
         class="col-12 col-lg-7 col-md-9 col-sm-11 py-5 m-auto p-0 text-center"
@@ -82,15 +95,17 @@
 
 <script>
 import Message from "../components/Message";
-$(function() {
+import Loading from "../components/Loading";
+$(function () {
   var navMain = $(".navbar-collapse");
-  navMain.on("click", "a:not([data-toggle])", null, function() {
+  navMain.on("click", "a:not([data-toggle])", null, function () {
     navMain.collapse("hide");
   });
 });
 export default {
   data() {
     return {
+      activeTool: null,
       editPortfolio: false,
       showMessages: true,
       sale: false,
@@ -110,9 +125,9 @@ export default {
   },
 
   methods: {
-    async SetToolManagerPortfolio() {},
     async getMessages() {
       this.$store.dispatch("getMessages");
+      this.activeTool = "Messages";
     },
     async login() {
       await this.$auth.loginWithPopup();
@@ -126,6 +141,7 @@ export default {
   },
   components: {
     Message,
+    Loading,
   },
 };
 </script>

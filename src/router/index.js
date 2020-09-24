@@ -39,6 +39,11 @@ const routes = [
     name: "Dashboard",
     component: Dashboard,
   },
+  {
+    path: "*",
+    name: "home",
+    component: Home,
+  },
 ];
 
 const router = new VueRouter({

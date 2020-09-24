@@ -64,6 +64,15 @@ export default new Vuex.Store({
         console.error(error);
       }
     },
+    async deleteMessage({ commit, dispatch }, id) {
+      try {
+        let res = await api.delete("messages/" + id);
+        console.log(res.data);
+        dispatch("getMessages");
+      } catch (error) {
+        console.error(error);
+      }
+    },
 
     //TODO add the logic and server stuff for this
     async addToEmailList({}, email) {

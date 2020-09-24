@@ -7,7 +7,8 @@
     </div>
     <div class="row bg-secondary py-5">
       <div class="col-md-6 col-12 p-0">
-        <form class="text-left p-2 form-box card bg-dark text-light shadow m-auto p-1">
+        <MessageForm />
+        <!-- <form class="text-left p-2 form-box card bg-dark text-light shadow m-auto p-1">
           <h2 class="text-primary">Send us a message.</h2>
           <label class="label" for="name">Name</label>
           <input class="w-100" type="text" />
@@ -18,7 +19,7 @@
           <label class="label" for="name">Message</label>
           <textarea class="w-100" type="text" rows="8" />
           <button class="btn btn-info text-light mt-5 py-2 my-4">Submit</button>
-        </form>
+        </form> -->
       </div>
       <div class="col-md-6 col-12 py-5 px-5">
         <h4 class="text-primary">Sales</h4>
@@ -34,9 +35,12 @@
 </template>
 
 <script>
+import MessageForm from "../components/messageForm";
 export default {
   name: "ContactUs",
-  components: {},
+  components: {
+    MessageForm,
+  },
 };
 </script>
 

@@ -8,16 +8,20 @@
     <div class="row bg-dark px-3 px-lg-5">
       <div class="p-0 col-12 col-lg-6 py-4 text-light m-auto">
         <h4 class="text-primary p-2 m-0">Web Design</h4>
-        <p class="px-3 m-0">We build, host, and maintain, beautiful mobile friendly sites.</p>
+        <p class="px-3 m-0">
+          We build, host, and maintain, beautiful mobile-friendly sites.
+        </p>
 
-        <h4 class="text-primary p-2 m-0">site managment tools</h4>
-        <p
-          class="px-3 m-0"
-        >We provide tools to help you maintain your site or run e-mail marketing campagns.</p>
+        <h4 class="text-primary p-2 m-0">site management tools</h4>
+        <p class="px-3 m-0">
+          We provide tools to help you maintain your site or run e-mail
+          marketing campaigns.
+        </p>
         <h4 class="text-primary p-2 m-0">PPC ( pay per click ) advertizing</h4>
-        <p
-          class="px-3 m-0"
-        >We can properly optimize you're ad campagn. Through social media and search engines</p>
+        <p class="px-3 m-0">
+          We can properly optimize your ad campaign. Through social media and
+          search engines
+        </p>
       </div>
       <div class="p-0 col-12 col-lg-6 text-light m-auto">
         <div class="pos-rel p-0 pt-lg-4 m-auto">
@@ -42,21 +46,32 @@
             alt
           />
         </div>
-        <h4 class="text-primary p-2 py-lg-4 m-0">a plan talored to your bussiness</h4>
+        <h4 class="text-primary p-2 py-lg-4 m-0">
+          a plan tailored to your business
+        </h4>
 
-        <p>We provide a free consoltaion to talk about you're companies needs. Not everyones situation is the same. we want to take the time to see how we can best help you accomplish you're goals. We provide an array of services to make this process easy and fit any budget. If your just getting started or growing your business we can create a plan just for you.</p>
+        <p>
+          We provide a free consultation to talk about your companies needs. Not
+          everyone's situation is the same. we want to take the time to see how
+          we can best help you accomplish your goals. We provide an array of
+          services to make this process easy and fit any budget.
+        </p>
       </div>
       <div class="spacer-top-2 col-12 col-lg-6 order-1 order-lg-2">
         <h4 class="text-primary m-0">Cementing your digital precence</h4>
 
-        <p
-          class="px-3 m-0"
-        >Navigating the online world can be intimidating and take time. We provide an array of services to make this prossess easy and fit any budget. Just getting started or growing you company we can create a plan just for you.</p>
+        <p class="px-3 m-0">
+          Navigating the online world can be intimidating and take time. We
+          provide an array of services to make this process easy and fit any
+          budget. Just getting started or growing your company we can create a
+          plan to suit your needs.
+        </p>
       </div>
     </div>
     <div class="row bg-secondary py-3 my-3">
       <div class="col-lg-6 col-12 p-0">
-        <form class="d-flex justify-content-center align-items-center p-lg-4">
+        <MessageForm />
+        <!-- <form class="d-flex justify-content-center align-items-center p-lg-4">
           <div class="bg-dark shadow text-primary form-container">
             <h4>Get in touch</h4>
             <label class="m-0 pt-2 text-light">Name</label>
@@ -71,23 +86,32 @@
             <br />
             <input v-model="senderPhoneNumber" class="p-1 w-100" type="text" />
             <br />
-            <label class="m-0 pt-2 text-light">E-mail</label>
+            <label class="m-0 pt-2 text-light">Message</label>
             <br />
             <textarea v-model="body" class="p-1 w-100" rows="5"></textarea>
             <br />
-            <button @click="submitMessageForm" class="btn btn-primary mt-3 px-5">Send message</button>
+            <button
+              @click="submitMessageForm"
+              class="btn btn-primary mt-3 px-5"
+            >
+              Send message
+            </button>
           </div>
-        </form>
+        </form> -->
       </div>
       <div class="col-lg-6 col-12 p-0">
-        <form class="d-flex justify-content-center align-items-center py-4 p-lg-4">
+        <form
+          class="d-flex justify-content-center align-items-center py-4 p-lg-4"
+        >
           <div class="text-primary form-container bg-dark shadow">
             <h4>Join our e-mail list</h4>
             <label class="text-light">E-mail</label>
             <br />
             <input v-model="clubEmail" class="p-1 w-100" type="text" />
             <br />
-            <button @click="addToEmailList" class="btn btn-primary mt-3 px-5">Join</button>
+            <button @click="addToEmailList" class="btn btn-primary mt-3 px-5">
+              Join
+            </button>
           </div>
         </form>
       </div>
@@ -96,18 +120,17 @@
 </template>
 
 <script>
-import Services from "../components/ServicesComp";
-
+import MessageForm from "../components/messageForm";
 export default {
   name: "Home",
 
   data() {
     return {
       //note form data
-      senderName: "",
-      senderEmail: "",
-      senderPhoneNumber: "",
-      body: "",
+      // senderName: "",
+      // senderEmail: "",
+      // senderPhoneNumber: "",
+      // body: "",
       //note email list data
       clubEmail: "",
     };
@@ -126,7 +149,7 @@ export default {
     addToEmailList() {},
   },
 
-  components: {},
+  components: { MessageForm },
 };
 </script>
 

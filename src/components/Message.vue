@@ -1,32 +1,35 @@
 <template>
-  <div class="row">
-    <div class="col-lg-4 m-auto col-12 p-3 shadow bg-light">
-      <div class="row">
-        <div class="col-12 d-flex justify-content-between p-3">
-          <div class>
-            <div class>
-              <p>
-                <b>Name:</b>
-                {{message.senderName}}
-              </p>
-            </div>
-            <div class>
-              <p>
-                <b>Email:</b>
-                {{message.senderEmail}}
-              </p>
-            </div>
-            <div class>
-              <p>
-                <b>Message:</b>
-                {{message.body}}
-              </p>
-            </div>
-          </div>
-          <div class="d-flex flex-column justify-content-around p-2">
-            <button class="btn btn-primary">Reply</button>
-            <button class="btn btn-danger text-light">Delete</button>
-          </div>
+  <div class="row bg-secondary">
+    <div class="col-12 pt-2 bg-secondary p-0">
+      <div class="m-3 p-2 shadow bg-light">
+        <div class>
+          <p>
+            <b>Name:</b>
+            {{ message.senderName }}
+          </p>
+          <p v-if="message.senderPhoneNumber">
+            <b>Phone:</b>
+            {{ message.senderPhoneNumber }}
+          </p>
+        </div>
+        <div class>
+          <p>
+            <b>Email:</b>
+            {{ message.senderEmail }}
+          </p>
+        </div>
+        <div class>
+          <p>
+            <b>Message:</b>
+            {{ message.body }}
+          </p>
+        </div>
+
+        <div class="">
+          <!-- <button class="btn btn-primary">Reply</button> -->
+          <button @click="deleteMessage" class="btn btn-danger px-5 text-light">
+            Delete
+          </button>
         </div>
       </div>
     </div>
@@ -37,8 +40,12 @@
 export default {
   name: "messageComponent",
   props: ["message"],
+  methods: {
+    deleteMessage() {
+      this.$store.dispatch("deleteMessage", this.message.id);
+    },
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>

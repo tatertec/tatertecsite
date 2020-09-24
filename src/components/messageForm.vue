@@ -64,6 +64,16 @@
       <br />
       <textarea v-model="body" class="p-1 w-100" rows="5"></textarea>
       <br />
+      <!-- this is here for robots to fill out... not humans -->
+      <div style="position: absolute; left: -5000px" aria-hidden="true">
+        <input
+          v-model="botfeild"
+          type="text"
+          name="b_bdfa11b8ddbcf6123b2e21b4a_c3dbd0038c"
+          tabindex="-1"
+          value=""
+        />
+      </div>
       <button @click="submitMessageForm" class="btn btn-primary mt-3 px-5">
         Send message
       </button>
@@ -79,12 +89,18 @@ export default {
       senderName: "",
       senderEmail: "",
       senderPhoneNumber: "",
+      botfeild: "",
       body: "",
     };
   },
   methods: {
     submitMessageForm() {
       event.preventDefault();
+      if (this.botfeild) {
+        console.log("no bots allowed");
+        return;
+      }
+      console.log("sending message");
       let data = {
         senderName: this.senderName,
         senderEmail: this.senderEmail,

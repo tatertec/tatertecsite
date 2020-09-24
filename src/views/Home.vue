@@ -104,14 +104,7 @@
           class="d-flex justify-content-center align-items-center py-4 p-lg-4"
         >
           <div class="text-primary form-container bg-dark shadow">
-            <h4>Join our e-mail list</h4>
-            <label class="text-light">E-mail</label>
-            <br />
-            <input v-model="clubEmail" class="p-1 w-100" type="text" />
-            <br />
-            <button @click="addToEmailList" class="btn btn-primary mt-3 px-5">
-              Join
-            </button>
+            <MailJoinForm />
           </div>
         </form>
       </div>
@@ -120,6 +113,7 @@
 </template>
 
 <script>
+import MailJoinForm from "../components/signupmailchimp";
 import MessageForm from "../components/messageForm";
 export default {
   name: "Home",
@@ -149,7 +143,7 @@ export default {
     addToEmailList() {},
   },
 
-  components: { MessageForm },
+  components: { MessageForm, MailJoinForm },
 };
 </script>
 

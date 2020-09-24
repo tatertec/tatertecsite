@@ -12,55 +12,50 @@
         </div>
       </div>
     </div>
-    <div v-else class="row">
-      <div class="col-12 p-0 text-center">
+    <div v-else class="row bg-secondary ">
+      <div class="col-12 p-0 text-center bg-light">
         <h1 class="text-primary h1-anim py-5">Dashboard</h1>
       </div>
 
-      <div
-        class="col-12 bg-secondary py-3 d-flex justify-content-between align-items-center"
-      >
-        <div class="d-flex align-items-center">
-          <img
-            class="profile-img"
-            :src="$auth.userInfo.picture"
-            alt="user-profile-image"
-          />
-          <div class="dropdown mr-1">
-            <button
-              type="button"
-              class="btn btn-dark text-light dropdown-toggle"
-              id="dropdownMenuOffset"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-              data-offset="0,0"
+      <div class="col-12 bg-secondary py-4 ">
+        <div class="dropdown mr-1">
+          <button
+            type="button"
+            class="btn btn-dark text-light dropdown-toggle"
+            id="dropdownMenuOffset"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            data-offset="0,0"
+          >
+            MENU
+          </button>
+          <div
+            class="dropdown-menu  p-0 m-0 "
+            aria-labelledby="dropdownMenuOffset"
+          >
+            <span class="action dropdown-item">...</span>
+            <span class="action dropdown-item">...</span>
+            <span class="action dropdown-item">...</span>
+            <span @click="getMessages" class="action dropdown-item"
+              >Messages</span
             >
-              Toolbox
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-              <!-- <span @click="SetToolManagePortfolio" class="action dropdown-item">Portfolio</span> -->
-              <!-- <span @click="SetToolManageSale" class="action dropdown-item">Sale</span> -->
-              <!-- <span @click="SetToolManageContent" class="action dropdown-item">Content</span> -->
-              <span @click="getMessages" class="action dropdown-item"
-                >Messages</span
-              >
-            </div>
+            <hr class="bg-dark p-0 m-0 " />
+            <span class="action dropdown-item text-danger" @click="logout"
+              >logout</span
+            >
           </div>
         </div>
+      </div>
+      <div class="col-12 bg-secondary p-1 ">
+        <h3 class="px-2">Messages</h3>
+      </div>
 
-        <div class>
-          <span class="action" @click="logout">logout</span>
-        </div>
-      </div>
-      <div class="col-12 bg-secondary p-2 ">
-        <h3>Messages</h3>
-        <Message
-          v-for="message in messages"
-          :key="message.id"
-          :message="message"
-        />
-      </div>
+      <Message
+        v-for="message in messages"
+        :key="message.id"
+        :message="message"
+      />
       <div
         v-if="editPortfolio"
         class="col-12 col-lg-7 col-md-9 col-sm-11 py-5 m-auto p-0 text-center"
@@ -160,9 +155,8 @@ export default {
   width: 100%;
 }
 .profile-img {
-  height: 5rem;
-  width: 5rem;
-  padding: 0.5rem;
+  height: 3rem;
+  width: 3rem;
   overflow: hidden;
   border-radius: 50%;
 }

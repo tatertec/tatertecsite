@@ -3,14 +3,10 @@
     <div class="col-12 p-0 bg-secondary">
       <div v-if="!$auth.isAuthenticated" class="row p-0 m-0">
         <div class="col-12 p-0 text-center bg-light">
-          <h1 class="text-primary py-5">Login to continue</h1>
+          <h1 class="text-primary">Login to continue</h1>
         </div>
         <div class="col-12 p-0">
-          <div class="text-center py-5">
-            <button class="btn btn-primary text-light px-5" @click="login">
-              Login
-            </button>
-          </div>
+          <div class="text-center py-5"></div>
         </div>
       </div>
       <div v-else class="row p-0 m-0">
@@ -20,104 +16,66 @@
 
         <div class="col-12 bg-secondary">
           <div class="dropdown p-3">
-            <button
+            <div
               type="button"
-              class="btn btn-dark text-light dropdown-toggle"
+              class="btn btn-dark text-light dashboard-menu-btn text-center p-2 m-0"
               id="dropdownMenuOffset"
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
               data-offset="0,0"
             >
-              {{ this.activeTool || "MENU" }}
-            </button>
+              {{ this.activeTool ? this.activeTool : "Select a tool" }}
+            </div>
             <div
               class="dropdown-menu p-0 m-0"
               aria-labelledby="dropdownMenuOffset"
             >
-              <span class="action dropdown-item">...</span>
-              <span class="action dropdown-item">...</span>
-              <span class="action dropdown-item">...</span>
-              <span @click="getMessages" class="action dropdown-item"
-                >Messages</span
+              <span @click="setTool('portfolio')" class="action dropdown-item">
+                Portfolio
+              </span>
+              <span @click="setTool('sale')" class="action dropdown-item"
+                >Sale</span
               >
-              <hr class="bg-dark p-0 m-0" />
-              <span class="action dropdown-item text-danger" @click="logout"
-                >logout</span
+
+              <span @click="setTool('message')" class="action dropdown-item"
+                >Messages</span
               >
             </div>
           </div>
         </div>
         <div class="col-12">
-          <div v-if="this.activeTool === 'Messages'">
-            <div v-if="messages.length > 0">
-              <Message
-                v-for="message in messages"
-                :key="message.id"
-                :message="message"
-              />
-            </div>
+          <div v-if="this.activeTool === 'message'">
+            <MessageManager />
           </div>
-          <!-- <div>
-          <Loading />
-        </div> -->
         </div>
-        <div v-if="this.activeTool === 'Portfolio'">
-          <PortfolioManager />
-          />
+        <div class="col-12">
+          <div v-if="this.activeTool === 'portfolio'">
+            <PortfolioManager />
+          </div>
         </div>
-        <!-- <div v-else>
-        <Loading />
-      </div> -->
+        <div class="col-12">
+          <div v-if="this.activeTool === 'sale'">
+            <SaleManager />
+          </div>
+        </div>
       </div>
-
-      <!-- <div
-        v-if="editPortfolio"
-        class="col-12 col-lg-7 col-md-9 col-sm-11 py-5 m-auto p-0 text-center"
-      >
-        <p>{{ $auth.userInfo.email }}</p>
-        <button class="btn btn-dark text-light my-3 p-3 px-5">
-          <h3 class="m-0 p-0">
-            <i class="fas fa-camera"></i>
-          </h3>
-        </button>
-        <input class="d-none" ref="picture-file" type="file" />
-        <br />
-        <img
-          class="preview-img"
-          src="https://placehold.it/500x500?text=please%20select%20a%20file"
-          alt
-        />
-        <br />
-        <button class="btn btn-primary my-3">Submit</button>
-      </div> -->
     </div>
   </div>
 </template>
 
 <script>
-import Message from "../components/Message";
-import Loading from "../components/Loading";
-$(function () {
-  var navMain = $(".navbar-collapse");
-  navMain.on("click", "a:not([data-toggle])", null, function () {
-    navMain.collapse("hide");
-  });
-});
+import MessageManager from "../components/MessageManager";
+import PortfolioManager from "../components/PortfolioManager";
+import SaleManager from "../components/SaleManager";
+
 export default {
   data() {
     return {
       activeTool: null,
-      editPortfolio: false,
-      showMessages: true,
-      sale: false,
-      content: false,
     };
   },
   computed: {
-    messages() {
-      return this.$store.state.MessageStore.messages;
-    },
     profile() {
       return this.$store.state.profile;
     },
@@ -127,28 +85,41 @@ export default {
   },
 
   methods: {
-    async getMessages() {
-      this.$store.dispatch("getMessages");
-      this.activeTool = "Messages";
-    },
-    async login() {
-      await this.$auth.loginWithPopup();
-      this.$store.dispatch("setBearer", this.$auth.bearer);
-      this.$store.dispatch("getProfile");
-    },
-    async logout() {
-      this.$store.dispatch("resetBearer");
-      await this.$auth.logout({ returnTo: window.location.origin });
+    async setTool(name) {
+      this.activeTool = name;
     },
   },
   components: {
-    Message,
-    Loading,
+    MessageManager,
+    PortfolioManager,
+    SaleManager,
   },
 };
 </script>
 
 <style>
+.dropdown-item {
+  transition: 0.3s;
+  background: #212939 !important;
+  color: rgb(235, 235, 235) !important;
+  border-bottom: solid black 1px;
+}
+.dropdown-item:hover {
+  transition: 0.3s;
+  background: #212939d7 !important;
+  color: rgb(235, 235, 235) !important;
+  border-bottom: solid rgba(255, 255, 255, 0.527) 1px;
+}
+
+.dropdown-item:active {
+  transition: 0.3s;
+  background: #fbb84b !important;
+  color: black !important;
+  border-bottom: solid black 1px;
+}
+.dashboard-menu-btn {
+  width: 10rem;
+}
 .action {
   cursor: pointer;
 }

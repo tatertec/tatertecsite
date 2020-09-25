@@ -15,10 +15,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul
-            class="navbar-nav d-flex justify-content-around text-dark align-items-center"
+            class="navbar-nav d-flex justify-content-around text-dark align-items-center px-3"
           >
             <li class="align-self-center w-100 text-center m-0 p-0">
-              <b class="xxl px-lg-5 mx-lg-3">TaterTec</b>
+              <b class="xxl px-5 mx-5">TaterTec</b>
               <hr class="d-lg-none bg-dark" />
             </li>
             <li class="nav-item active">
@@ -38,25 +38,31 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" tabindex="-1">
+              <a class="nav-link" href="#">
                 <router-link to="Services">SERVICES</router-link>
               </a>
             </li>
-            <li class="nav-item"></li>
             <li class="nav-item">
-              <a class="nav-link" href="#" tabindex="-1">
+              <a class="nav-link" href="#">
                 <router-link to="ContactUs">CONTACT</router-link>
               </a>
             </li>
+
             <li v-if="$auth.isAuthenticated" class="nav-item">
               <a class="nav-link" href="#">
                 <router-link to="Dashboard">DASHBOARD</router-link>
               </a>
             </li>
-            <li v-else class="nav-item">
-              <a class="nav-link" href="#">
-                <router-link to="Dashboard">LOGIN</router-link>
-              </a>
+            <li class="px-2 nav-item" v-if="!$auth.isAuthenticated">
+              <span class="auth-links nav-link action" @click="login"
+                >LOGIN</span
+              >
+            </li>
+            <li class="nav-item px-2" v-if="$auth.isAuthenticated">
+              <a class="" href="#"> </a>
+              <div class="auth-links log-out-link action" @click="logout">
+                LOGOUT
+              </div>
             </li>
           </ul>
         </div>
@@ -74,12 +80,37 @@ $(function () {
   });
 });
 export default {
-  methods: {},
+  methods: {
+    async logout() {
+      this.$store.dispatch("resetBearer");
+      await this.$auth.logout({ returnTo: window.location.origin });
+    },
+    async login() {
+      await this.$auth.loginWithPopup();
+      this.$store.dispatch("setBearer", this.$auth.bearer);
+      this.$store.dispatch("getProfile");
+    },
+  },
 };
 </script>
 
 <style>
+.auth-links {
+  padding: 0px;
+  margin: 0px;
+  color: #212939 !important;
+  font-size: medium;
+}
+.auth-links:hover {
+  color: rgb(255, 255, 255) !important;
+}
+.auth-links.log-out-link:hover {
+  color: rgb(197, 50, 50) !important;
+}
 .xxl {
   font-size: xx-large;
+}
+.fixed {
+  position: relative;
 }
 </style>

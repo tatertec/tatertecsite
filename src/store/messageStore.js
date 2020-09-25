@@ -13,31 +13,31 @@ export const MessageStore = {
   },
 
   actions: {
-    //TODO add this to my other client side templates
-
+    /**@param {object} data sends a message to the database props needed are {string} senderName  {string}senderEmail {string} senderPhoneNumber*/
     async sendMessage({}, data) {
-      console.log("sending message");
       try {
-        let res = await api.post("messages", data);
-        console.log(res.data);
+        await api.post("messages", data);
       } catch (error) {
         console.error(error);
       }
     },
+    /**@param {any}commit commits data to store*/
     async getMessages({ commit }) {
       try {
         let res = await api.get("messages");
-        console.log(res.data);
         commit("setMessages", res.data);
       } catch (error) {
         console.error(error);
       }
     },
-    async deleteMessage({ commit, dispatch }, id) {
+    /**@param {any}dispatch dispatches an action
+     * @param {string} id   remove a message by its id*/
+    async deleteMessage({ dispatch }, id) {
       try {
         let res = await api.delete("messages/" + id);
-        console.log(res.data);
-        dispatch("getMessages");
+        if (res.data) {
+          dispatch("removeMessage", id);
+        }
       } catch (error) {
         console.error(error);
       }

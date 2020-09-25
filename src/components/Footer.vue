@@ -36,10 +36,10 @@
                 <a target="_blank" href="https://www.instagram.com/tatertec">
                   <i class="m-2 fab fa-instagram text-light"></i>
                 </a>
-                <!--NOTE this is the twitter icon when we get it up
-                 <a target="_blank" href="#">
+
+                <a target="_blank" href="https://twitter.com/TaterTec">
                   <i class="m-2 fab fa-twitter text-light"></i>
-                </a> -->
+                </a>
               </h5>
             </div>
           </div>

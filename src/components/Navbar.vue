@@ -1,5 +1,5 @@
 <template>
-  <div class="row bg-warning sticky-top">
+  <div class="row bg-warning sticky-top shadow rounded-bottom">
     <div class="col-12">
       <nav class="navbar navbar-expand-lg navbar-light text-dark">
         <button
@@ -14,7 +14,13 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <ul
+            class="navbar-nav d-flex justify-content-around text-dark align-items-center"
+          >
+            <li class="align-self-center w-100 text-center m-0 p-0">
+              <b class="xxl px-lg-5 mx-lg-3">TaterTec</b>
+              <hr class="d-lg-none bg-dark" />
+            </li>
             <li class="nav-item active">
               <a class="nav-link" href="#">
                 <router-link to="/">HOME</router-link>
@@ -53,15 +59,6 @@
               </a>
             </li>
           </ul>
-          <div>
-            <h5 class="d-inline p-0 m-0 px-3">Tater-Tec</h5>
-          </div>
-          <img
-            v-if="$auth.isAuthenticated"
-            class="profile-img"
-            :src="$auth.userInfo.picture"
-            alt="user-profile-image"
-          />
         </div>
       </nav>
     </div>
@@ -81,4 +78,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.xxl {
+  font-size: xx-large;
+}
+</style>

@@ -23,8 +23,8 @@
       </div>
       <div class="col-md-6 col-12 py-5 px-5">
         <h4 class="text-primary">Sales</h4>
-        <h5>Phone: ...</h5>
-        <h5>E-mail: justingates.dev@gmail.com</h5>
+        <h5>Phone: 208-985-5973</h5>
+        <h5>E-mail: tatertech@gmail.com</h5>
         <br />
         <h4 class="text-primary">Technical help</h4>
         <h5>Phone: 208-695-4231</h5>

@@ -114,7 +114,7 @@ export default {
   },
   computed: {
     messages() {
-      return this.$store.state.messages;
+      return this.$store.state.MessageStore.messages;
     },
     profile() {
       return this.$store.state.profile;

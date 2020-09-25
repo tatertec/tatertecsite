@@ -21,15 +21,25 @@
             <h5>SOCIAL MEDIA</h5>
             <div class="d-flex justify-content-center">
               <h5>
-                <a href>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/company/tatertec"
+                >
                   <i class="m-2 fab fa-linkedin-in text-light"></i>
                 </a>
-                <a href>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/TaterTec-101971145006753/"
+                >
                   <i class="m-2 fab fa-facebook-f text-light"></i>
                 </a>
-                <a href>
-                  <i class="m-2 fab fa-twitter text-light"></i>
+                <a target="_blank" href="https://www.instagram.com/tatertec">
+                  <i class="m-2 fab fa-instagram text-light"></i>
                 </a>
+                <!--NOTE this is the twitter icon when we get it up
+                 <a target="_blank" href="#">
+                  <i class="m-2 fab fa-twitter text-light"></i>
+                </a> -->
               </h5>
             </div>
           </div>

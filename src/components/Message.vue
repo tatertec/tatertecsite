@@ -1,6 +1,6 @@
 <template>
-  <div class="col-12 p-0">
-    <div class="m-1 p-2 shadow bg-light">
+  <div class="">
+    <div class="m-1 my-3 p-2 p-3 shadow bg-light">
       <div class>
         <p>
           <b>Name:</b>

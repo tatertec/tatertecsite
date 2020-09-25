@@ -49,46 +49,47 @@
           </div>
         </div>
       </div>
-      <div v-if="this.activeTool === 'Messages'">
-        <div v-if="messages.length > 0">
-          <Message
-            v-for="message in messages"
-            :key="message.id"
-            :message="message"
-          />
+      <div class="col-12">
+        <div v-if="this.activeTool === 'Messages'">
+          <div v-if="messages.length > 0">
+            <Message
+              v-for="message in messages"
+              :key="message.id"
+              :message="message"
+            />
+          </div>
         </div>
-        <div >
+        <!-- <div>
           <Loading />
-        </div>
+        </div> -->
       </div>
       <div v-if="this.activeTool === 'Portfolio'">
-          <PortfolioManager/>
-          />
-        </div>
-        <div v-else>
-          <Loading />
-        </div>
-      </div>
-      <div
-        v-if="editPortfolio"
-        class="col-12 col-lg-7 col-md-9 col-sm-11 py-5 m-auto p-0 text-center"
-      >
-        <p>{{ $auth.userInfo.email }}</p>
-        <button class="btn btn-dark text-light my-3 p-3 px-5">
-          <h3 class="m-0 p-0">
-            <i class="fas fa-camera"></i>
-          </h3>
-        </button>
-        <input class="d-none" ref="picture-file" type="file" />
-        <br />
-        <img
-          class="preview-img"
-          src="https://placehold.it/500x500?text=please%20select%20a%20file"
-          alt
+        <PortfolioManager />
         />
-        <br />
-        <button class="btn btn-primary my-3">Submit</button>
       </div>
+      <!-- <div v-else>
+        <Loading />
+      </div> -->
+    </div>
+    <div
+      v-if="editPortfolio"
+      class="col-12 col-lg-7 col-md-9 col-sm-11 py-5 m-auto p-0 text-center"
+    >
+      <p>{{ $auth.userInfo.email }}</p>
+      <button class="btn btn-dark text-light my-3 p-3 px-5">
+        <h3 class="m-0 p-0">
+          <i class="fas fa-camera"></i>
+        </h3>
+      </button>
+      <input class="d-none" ref="picture-file" type="file" />
+      <br />
+      <img
+        class="preview-img"
+        src="https://placehold.it/500x500?text=please%20select%20a%20file"
+        alt
+      />
+      <br />
+      <button class="btn btn-primary my-3">Submit</button>
     </div>
   </div>
 </template>

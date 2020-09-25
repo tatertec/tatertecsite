@@ -96,11 +96,10 @@ export default {
   methods: {
     submitMessageForm() {
       event.preventDefault();
+      //NOTE prevents robots from attacking
       if (this.botfeild) {
-        console.log("no bots allowed");
         return;
       }
-      console.log("sending message");
       let data = {
         senderName: this.senderName,
         senderEmail: this.senderEmail,

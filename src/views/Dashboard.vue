@@ -1,25 +1,25 @@
 <template>
-  <div class="col-12 p-0">
-    <div v-if="!$auth.isAuthenticated" class="row">
-      <div class="col-12 p-0 text-center py-5">
-        <h1 class="text-primary">Login to continue</h1>
-      </div>
-      <div class="col-12 p-0">
-        <div class="text-center py-5">
-          <button class="btn btn-primary text-light px-5" @click="login">
-            Login
-          </button>
+  <div class="row">
+    <div class="col-12 p-0 bg-secondary">
+      <div v-if="!$auth.isAuthenticated" class="row p-0 m-0">
+        <div class="col-12 p-0 text-center bg-light">
+          <h1 class="text-primary py-5">Login to continue</h1>
+        </div>
+        <div class="col-12 p-0">
+          <div class="text-center py-5">
+            <button class="btn btn-primary text-light px-5" @click="login">
+              Login
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div v-else class="row bg-secondary">
-      <div class="col-12 p-0 text-center bg-light">
-        <h1 class="text-primary h1-anim py-5">Dashboard</h1>
-      </div>
+      <div v-else class="row p-0 m-0">
+        <div class="col-12 p-0 text-center bg-light">
+          <h1 class="text-primary h1-anim py-5">Dashboard</h1>
+        </div>
 
-      <div class="col-12 bg-secondary p-1">
-        <div class="p-2">
-          <div class="dropdown mr-1">
+        <div class="col-12 bg-secondary">
+          <div class="dropdown p-3">
             <button
               type="button"
               class="btn btn-dark text-light dropdown-toggle"
@@ -48,48 +48,49 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-12">
-        <div v-if="this.activeTool === 'Messages'">
-          <div v-if="messages.length > 0">
-            <Message
-              v-for="message in messages"
-              :key="message.id"
-              :message="message"
-            />
+        <div class="col-12">
+          <div v-if="this.activeTool === 'Messages'">
+            <div v-if="messages.length > 0">
+              <Message
+                v-for="message in messages"
+                :key="message.id"
+                :message="message"
+              />
+            </div>
           </div>
-        </div>
-        <!-- <div>
+          <!-- <div>
           <Loading />
         </div> -->
-      </div>
-      <div v-if="this.activeTool === 'Portfolio'">
-        <PortfolioManager />
-        />
-      </div>
-      <!-- <div v-else>
+        </div>
+        <div v-if="this.activeTool === 'Portfolio'">
+          <PortfolioManager />
+          />
+        </div>
+        <!-- <div v-else>
         <Loading />
       </div> -->
-    </div>
-    <div
-      v-if="editPortfolio"
-      class="col-12 col-lg-7 col-md-9 col-sm-11 py-5 m-auto p-0 text-center"
-    >
-      <p>{{ $auth.userInfo.email }}</p>
-      <button class="btn btn-dark text-light my-3 p-3 px-5">
-        <h3 class="m-0 p-0">
-          <i class="fas fa-camera"></i>
-        </h3>
-      </button>
-      <input class="d-none" ref="picture-file" type="file" />
-      <br />
-      <img
-        class="preview-img"
-        src="https://placehold.it/500x500?text=please%20select%20a%20file"
-        alt
-      />
-      <br />
-      <button class="btn btn-primary my-3">Submit</button>
+      </div>
+
+      <!-- <div
+        v-if="editPortfolio"
+        class="col-12 col-lg-7 col-md-9 col-sm-11 py-5 m-auto p-0 text-center"
+      >
+        <p>{{ $auth.userInfo.email }}</p>
+        <button class="btn btn-dark text-light my-3 p-3 px-5">
+          <h3 class="m-0 p-0">
+            <i class="fas fa-camera"></i>
+          </h3>
+        </button>
+        <input class="d-none" ref="picture-file" type="file" />
+        <br />
+        <img
+          class="preview-img"
+          src="https://placehold.it/500x500?text=please%20select%20a%20file"
+          alt
+        />
+        <br />
+        <button class="btn btn-primary my-3">Submit</button>
+      </div> -->
     </div>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div class="col-12 col-lg-7 col-md-9 col-sm-11 py-5 m-auto p-0 text-center">
     <h3>Feature comming soon</h3>
-    <!-- <button class="btn btn-dark text-light my-3 p-3 px-5">
+    <button class="btn btn-dark text-light my-3 p-3 px-5">
       <h3 class="m-0 p-0">
         <i class="fas fa-camera"></i>
       </h3>
@@ -14,7 +14,7 @@
       alt
     />
     <br />
-    <button class="btn btn-primary my-3">Submit</button> -->
+    <button class="btn btn-primary my-3">Submit</button>
   </div>
 </template>
 

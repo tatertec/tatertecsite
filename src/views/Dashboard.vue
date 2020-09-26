@@ -11,7 +11,7 @@
       </div>
       <div v-else class="row p-0 m-0">
         <div class="col-12 p-0 text-center bg-light">
-          <h1 class="text-primary h1-anim py-5">Dashboard</h1>
+          <h1 class="text-primary py-5">Dashboard</h1>
         </div>
 
         <div class="col-12 bg-secondary">
@@ -75,11 +75,11 @@
   </div>
 </template>
 
-<script>
+// <script>
 import AccountManager from "../components/dashboard/AccountManager";
-import MessageManager from "../components/MessageManager";
-import PortfolioManager from "../components/PortfolioManager";
-import SaleManager from "../components/SaleManager";
+import MessageManager from "../components/dashboard/MessageManager";
+import PortfolioManager from "../components/dashboard/PortfolioManager";
+import SaleManager from "../components/dashboard/SaleManager";
 
 export default {
   data() {
@@ -89,10 +89,7 @@ export default {
   },
   computed: {
     profile() {
-      return this.$store.state.profile;
-    },
-    user() {
-      return this.$store.state.user;
+      return this.$store.state.ProfileStore.profile;
     },
   },
 
@@ -136,13 +133,7 @@ export default {
 .action {
   cursor: pointer;
 }
-/* .h1-anim {
-  animation-name: h1;
-  animation-duration: 1s;
-  font-size: x-large;
-  padding: 0.5rem;
-  margin: 0rem;
-} */
+
 @keyframes h1 {
   0% {
     padding: 3rem;

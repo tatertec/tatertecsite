@@ -68,12 +68,9 @@
 </template>
 
 <script>
-import ServiceComp from "../components/ServicesComp";
 export default {
   name: "Portfolio",
-  components: {
-    ServiceComp,
-  },
+  components: {},
 };
 </script>
 

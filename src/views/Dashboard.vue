@@ -25,7 +25,7 @@
               aria-expanded="false"
               data-offset="0,0"
             >
-              {{ this.activeTool ? this.activeTool : "Select a tool" }}
+              Menu
             </div>
             <div
               class="dropdown-menu p-0 m-0"
@@ -41,6 +41,12 @@
               <span @click="setTool('message')" class="action dropdown-item"
                 >Messages</span
               >
+              <span @click="setTool('account')" class="action dropdown-item"
+                >Account</span
+              >
+            </div>
+            <div>
+              <h4>{{ this.activeTool || "" }}</h4>
             </div>
           </div>
         </div>
@@ -59,12 +65,18 @@
             <SaleManager />
           </div>
         </div>
+        <div class="col-12">
+          <div v-if="this.activeTool === 'account'">
+            <AccountManager />
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import AccountManager from "../components/dashboard/AccountManager";
 import MessageManager from "../components/MessageManager";
 import PortfolioManager from "../components/PortfolioManager";
 import SaleManager from "../components/SaleManager";
@@ -93,6 +105,7 @@ export default {
     MessageManager,
     PortfolioManager,
     SaleManager,
+    AccountManager,
   },
 };
 </script>

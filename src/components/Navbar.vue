@@ -1,6 +1,6 @@
 <template>
   <div class="row bg-warning sticky-top shadow rounded-bottom">
-    <div class="col-12">
+    <div class="col-12 p-0">
       <nav class="navbar navbar-expand-lg navbar-light text-dark">
         <button
           class="navbar-toggler"
@@ -14,10 +14,8 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul
-            class="navbar-nav d-flex justify-content-around text-dark align-items-center px-3"
-          >
-            <li class="align-self-center w-100 text-center m-0 p-0">
+          <ul class="navbar-nav text-dark align-items-center">
+            <li class="align-self-center text-center m-0 p-0">
               <b class="xxl px-5 mx-5">TaterTec</b>
               <hr class="d-lg-none bg-dark" />
             </li>

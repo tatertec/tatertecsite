@@ -10,6 +10,9 @@ export const MessageStore = {
     setMessages(state, messages) {
       state.messages = messages;
     },
+    removeMessage(state, messageId) {
+      state.messages = state.messages.filter((m) => m.id !== messageId);
+    },
   },
 
   actions: {
@@ -21,7 +24,7 @@ export const MessageStore = {
         console.error(error);
       }
     },
-    /**@param {any}commit commits data to store*/
+    /**@param {any}commit calls api to get all messages for the loged in user*/
     async getMessages({ commit }) {
       try {
         let res = await api.get("messages");
@@ -30,13 +33,13 @@ export const MessageStore = {
         console.error(error);
       }
     },
-    /**@param {any}dispatch dispatches an action
-     * @param {string} id   remove a message by its id*/
-    async deleteMessage({ dispatch }, id) {
+    /**@param {any}dispatch
+     * @param {string} id   removes a message by its id */
+    async deleteMessage({ commit }, id) {
       try {
         let res = await api.delete("messages/" + id);
         if (res.data) {
-          dispatch("removeMessage", id);
+          commit("removeMessage", id);
         }
       } catch (error) {
         console.error(error);

@@ -1,16 +1,19 @@
 <template>
   <div class="col-12 p-0">
     <div class="row">
-      <div class="col-4">
-        <h4 class="d-flex align-items-center justify-content-around">
-          <div class="" @click="getMessages">
-            <i class="fas fa-sync-alt action"></i>
+      <div class="col-7">
+        <h3 class="m-0 p-0">Messages</h3>
+      </div>
+      <div class="col-5">
+        <h4 class="d-flex align-items-center justify-content-end m-0 p-0">
+          <div class="p-1" @click="getMessages">
+            <i class="fas fa-sync-alt action px-2"></i>
           </div>
           <div v-if="profile.textEnabled" class="" @click="toggleTextAlert">
-            <i class="fas fa-bell action"></i>
+            <i class="fas fa-bell action px-2"></i>
           </div>
-          <div v-else class="" @click="toggleTextAlert">
-            <i class="fas fa-bell-slash action"></i>
+          <div v-else class="p-1" @click="toggleTextAlert">
+            <i class="fas fa-bell-slash action px-2"></i>
           </div>
         </h4>
       </div>
@@ -65,6 +68,7 @@ export default {
       await this.$store.dispatch("getMessages");
       this.loading = false;
     },
+    //
     toggleTextAlert() {
       this.$store.dispatch("toggleTextAlert", this.profile);
     },

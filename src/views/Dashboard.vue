@@ -6,7 +6,7 @@
           <h1 class="text-primary">Login to continue</h1>
         </div>
         <div class="col-12 p-0">
-          <div class="text-center py-5"></div>
+          <div class="text-center py-5">d</div>
         </div>
       </div>
       <div v-else class="row p-0 m-0">
@@ -14,8 +14,8 @@
           <h1 class="text-primary py-5">Dashboard</h1>
         </div>
 
-        <div class="col-12 bg-secondary">
-          <div class="dropdown p-3">
+        <div class="col-12 bg-secondary d-flex py-3 justify-content-start px-5">
+          <div class="dropdown mx-5">
             <div
               type="button"
               class="btn btn-dark text-light dashboard-menu-btn text-center p-2 m-0"
@@ -31,42 +31,39 @@
               class="dropdown-menu p-0 m-0"
               aria-labelledby="dropdownMenuOffset"
             >
-              <span @click="setTool('portfolio')" class="action dropdown-item">
+              <span @click="setTool('Portfolio')" class="action dropdown-item">
                 Portfolio
               </span>
-              <span @click="setTool('sale')" class="action dropdown-item"
+              <span @click="setTool('Sale')" class="action dropdown-item"
                 >Sale</span
               >
 
-              <span @click="setTool('message')" class="action dropdown-item"
+              <span @click="setTool('Messages')" class="action dropdown-item"
                 >Messages</span
               >
-              <span @click="setTool('account')" class="action dropdown-item"
+              <span @click="setTool('Account')" class="action dropdown-item"
                 >Account</span
               >
-            </div>
-            <div>
-              <h4>{{ this.activeTool || "" }}</h4>
             </div>
           </div>
         </div>
         <div class="col-12">
-          <div v-if="this.activeTool === 'message'">
+          <div v-if="this.activeTool === 'Messages'">
             <MessageManager />
           </div>
         </div>
         <div class="col-12">
-          <div v-if="this.activeTool === 'portfolio'">
+          <div v-if="this.activeTool === 'Portfolio'">
             <PortfolioManager />
           </div>
         </div>
         <div class="col-12">
-          <div v-if="this.activeTool === 'sale'">
+          <div v-if="this.activeTool === 'Sale'">
             <SaleManager />
           </div>
         </div>
         <div class="col-12">
-          <div v-if="this.activeTool === 'account'">
+          <div v-if="this.activeTool === 'Account'">
             <AccountManager />
           </div>
         </div>

@@ -19,7 +19,7 @@
             class="m-0 px-3 btn btn-dark text-light"
             type="button"
             data-toggle="modal"
-            data-target="#staticBackdrop"
+            data-target="#accountSettingsModal"
             title="Account settings"
           >
             Settings
@@ -31,13 +31,24 @@
 
         <div class="col-12">
           <div class="d-flex justify-content-between">
-            <label>texts remaining: {{ profile.textRemaining }}</label>
+            <label class="p-2 m-0"
+              >texts remaining: {{ profile.textRemaining }}</label
+            >
+            <span
+              type="button"
+              data-toggle="modal"
+              data-target="#purchaseModal"
+              title="Account settings"
+              class="px-lg-3 font-weight-bold px-1"
+            >
+              Buy more
+            </span>
           </div>
           <hr class="p-0 m-0" />
         </div>
         <div class="col-12">
           <div class="d-flex">
-            <label
+            <label class="p-2 m-0"
               >Text alert when: {{ profile.textAlertNumber }} texts
               remain</label
             >
@@ -45,10 +56,20 @@
           <hr class="p-0 m-0" />
         </div>
         <div class="col-12">
-          <div class="d-flex justify-content-between">
-            <label>Account Type: {{ profile.accountType }}</label>
+          <div class="d-flex justify-content-between align-items-center">
+            <label class="p-2 m-0"
+              >Account Type: {{ profile.accountType }}</label
+            >
             <div v-if="profile.accountType === 'basic'">
-              <!-- <label class="px-2 action">Upgrade</label> -->
+              <span
+                type="button"
+                data-toggle="modal"
+                data-target="#upgradeAccountModal"
+                title="Account settings"
+                class="px-lg-3 font-weight-bold px-1"
+              >
+                Upgrade
+              </span>
             </div>
           </div>
           <hr class="p-0 m-0" />
@@ -57,6 +78,12 @@
         <div class="col-12 p-0">
           <AccountSettingsModal />
         </div>
+        <div class="col-12 p-0">
+          <PurchaseModal />
+        </div>
+        <div class="col-12 p-0">
+          <UpgradeAccountModal />
+        </div>
       </div>
     </div>
   </div>
@@ -64,6 +91,8 @@
 
 <script>
 import AccountSettingsModal from "./AccountSettingsModal";
+import PurchaseModal from "./PurchaseModal";
+import UpgradeAccountModal from "./upgradeAccountModal";
 export default {
   name: "AccountManager",
 
@@ -79,6 +108,8 @@ export default {
   },
   components: {
     AccountSettingsModal,
+    PurchaseModal,
+    UpgradeAccountModal,
   },
 };
 </script>

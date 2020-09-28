@@ -2,17 +2,17 @@
   <div>
     <div
       class="modal bg-dark fade"
-      id="staticBackdrop"
+      id="accountSettingsModal"
       data-backdrop="static"
       data-keyboard="false"
       tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
+      aria-labelledby="accountSettingsModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content bg-light">
           <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">
+            <h5 class="modal-title" id="accountSettingsModalLabel">
               Account settings
             </h5>
             <button

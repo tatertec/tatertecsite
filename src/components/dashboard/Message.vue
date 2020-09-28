@@ -41,9 +41,9 @@
         </a>
         <button
           @click="deleteMessage"
-          class="mx-2 mx-lg-4 p-2 px-3 btn btn-danger text-light"
+          class="br-circle mx-2 mx-lg-4 p-2 px-3 btn-danger btn"
         >
-          Delete
+          <i class="fas fa-trash-alt"></i>
         </button>
       </div>
     </div>

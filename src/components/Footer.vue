@@ -8,13 +8,18 @@
             <div class="">
               <h4>
                 <br />
-                <a class="call-btn text-light p-2" href="tel:2086954231"
+                <a
+                  title="2086954231"
+                  class="call-btn text-light p-2"
+                  href="tel:2086954231"
                   ><i class="fas fa-phone-alt"></i
                 ></a>
                 208-695-4231
                 <br />
                 <br />
+
                 <a
+                  title="tatertec@gmail.com"
                   class="email-btn text-light p-2"
                   :href="`mailto:tatertec@gmail.com?subject = ${siteId}&body = buttonEmail.....`"
                 >
@@ -41,23 +46,33 @@
             <div class="d-flex justify-content-center">
               <h4>
                 <a
+                  class="link"
                   target="_blank"
                   href="https://www.linkedin.com/company/tatertec"
                 >
-                  <i class="m-2 fab fa-linkedin-in text-light"></i>
+                  <i class="m-2 link fab fa-linkedin-in text-light"></i>
                 </a>
                 <a
+                  class="link"
                   target="_blank"
                   href="https://www.facebook.com/TaterTec-101971145006753/"
                 >
-                  <i class="m-2 fab fa-facebook-f text-light"></i>
+                  <i class="m-2 link fab fa-facebook-f text-light"></i>
                 </a>
-                <a target="_blank" href="https://www.instagram.com/tatertec">
-                  <i class="m-2 fab fa-instagram text-light"></i>
+                <a
+                  class="link"
+                  target="_blank"
+                  href="https://www.instagram.com/tatertec"
+                >
+                  <i class="m-2 link fab fa-instagram text-light"></i>
                 </a>
 
-                <a target="_blank" href="https://twitter.com/TaterTec">
-                  <i class="m-2 fab fa-twitter text-light"></i>
+                <a
+                  class="link"
+                  target="_blank"
+                  href="https://twitter.com/TaterTec"
+                >
+                  <i class="m-2 link fab fa-twitter text-light"></i>
                 </a>
               </h4>
             </div>
@@ -73,4 +88,7 @@ export default {};
 </script>
 
 <style>
+.link:hover {
+  color: rgb(59, 196, 200) !important;
+}
 </style>

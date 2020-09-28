@@ -14,13 +14,13 @@ $info: rgb(17, 153, 153);
 }
 .btn-dark {
   color: $light;
-  border-color: darken($color: $dark, $amount: 20);
+  border-color: lighten($color: $dark, $amount: 30);
   background-color: $dark;
 }
 .btn-dark:hover {
   color: $dark;
-  background-color: lighten($color: $dark, $amount: 10);
-  border-color: lighten($color: $primary, $amount: 20);
+  background-color: lighten($color: $dark, $amount: 20);
+  border-color: lighten($color: $primary, $amount: 40);
 }
 .btn-success {
   color: $light;
@@ -30,5 +30,15 @@ $info: rgb(17, 153, 153);
 .btn-success:hover {
   color: $dark;
   background-color: lighten($color: $success, $amount: 10);
-  border-color: lighten($color: $primary, $amount: 20);
+  border-color: lighten($color: $primary, $amount: 40);
+}
+.btn-danger {
+  color: $light;
+  border-color: darken($color: $danger, $amount: 20);
+  background-color: $danger;
+}
+.btn-danger:hover {
+  color: $dark;
+  background-color: lighten($color: $danger, $amount: 10);
+  border-color: lighten($color: $primary, $amount: 40);
 }

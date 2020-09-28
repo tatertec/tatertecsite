@@ -24,9 +24,25 @@
         </p>
       </div>
 
-      <div class="">
-        <!-- <button class="btn btn-primary">Reply</button> -->
-        <button @click="deleteMessage" class="btn btn-danger px-5 text-light">
+      <div class="d-lg-block d-flex justify-content-between">
+        <a
+          :title="message.senderPhoneNumber"
+          class="br-circle mx-2 mx-lg-4 p-2 px-3 btn-success btn"
+          href="tel:2086954231"
+          ><i class="fas fa-phone-alt"></i
+        ></a>
+
+        <a
+          :title="message.senderEmail"
+          class="br-circle mx-2 mx-lg-4 p-2 px-3 btn-dark btn"
+          :href="`mailto:${message.senderEmail}?subject = ${siteId}&body = buttonEmail.....`"
+        >
+          <i class="far fa-envelope"></i>
+        </a>
+        <button
+          @click="deleteMessage"
+          class="mx-2 mx-lg-4 p-2 px-3 btn btn-danger text-light"
+        >
           Delete
         </button>
       </div>
@@ -37,7 +53,7 @@
 <script>
 export default {
   name: "messageComponent",
-  props: ["message"],
+  props: ["message", "siteId"],
   methods: {
     deleteMessage() {
       this.$store.dispatch("deleteMessage", this.message.id);
@@ -46,4 +62,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.br-circle {
+  border-radius: 100%;
+}
+</style>

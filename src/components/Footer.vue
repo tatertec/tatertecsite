@@ -1,26 +1,45 @@
 <template>
-  <div class="row bg-dark">
+  <div class="row bg-dark py-4">
     <div class="col-12 text-light">
       <div class="row d-flex justify-content-around">
         <div class="col-12 col-md-3 py-4 col-sm-6">
           <div class="text-center">
-            <h5 class="text-info">CONTACT</h5>
-            <div>Phone 208-695-4231</div>
-            <div>Email papa@gmail.com</div>
+            <h4 class="text-info">CONTACT</h4>
+            <div class="">
+              <h4>
+                <br />
+                <a class="call-btn text-light p-2" href="tel:2086954231"
+                  ><i class="fas fa-phone-alt"></i
+                ></a>
+                208-695-4231
+                <br />
+                <br />
+                <a
+                  class="email-btn text-light p-2"
+                  :href="`mailto:tatertec@gmail.com?subject = ${siteId}&body = buttonEmail.....`"
+                >
+                  <i class="far fa-envelope"></i>
+                </a>
+                tatertec@gmail.com
+              </h4>
+            </div>
           </div>
         </div>
         <div class="col-12 col-md-3 py-4 col-sm-6">
           <div class="text-center">
-            <h5 class="text-info">HOURS</h5>
-            <div>Monday - Friday 8-5</div>
-            <div>Saturday -Sunday closed</div>
+            <h4 class="text-info">HOURS</h4>
+            <br />
+            <h4>Monday - Friday 8-5</h4>
+            <br />
+            <h4>Saturday -Sunday closed</h4>
           </div>
         </div>
         <div class="col-12 col-md-3 py-4">
           <div class="text-center text-info">
-            <h5>SOCIAL MEDIA</h5>
+            <h4>SOCIAL MEDIA</h4>
+            <br />
             <div class="d-flex justify-content-center">
-              <h5>
+              <h4>
                 <a
                   target="_blank"
                   href="https://www.linkedin.com/company/tatertec"
@@ -40,7 +59,7 @@
                 <a target="_blank" href="https://twitter.com/TaterTec">
                   <i class="m-2 fab fa-twitter text-light"></i>
                 </a>
-              </h5>
+              </h4>
             </div>
           </div>
         </div>

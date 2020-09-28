@@ -17,12 +17,11 @@ export const ProfileStore = {
         console.error(error);
       }
     },
-
-    async toggleTextAlert({ commit, dispatch }, data) {
-      data.textEnabled = !data.textEnabled;
+    async updateProfile({ commit, dispatch }, profile) {
       try {
-        let res = await api.put("profile/" + data.id, data);
+        let res = await api.put("profile/" + profile.id, profile);
         console.log(res.data);
+        commit("setProfile", res.data);
       } catch (error) {
         console.error(error);
       }

@@ -24,6 +24,7 @@
           v-for="message in messages"
           :key="message.id"
           :message="message"
+          :siteId="profile.siteId"
         />
       </div>
       <div v-else class="col-12">
@@ -70,7 +71,8 @@ export default {
     },
     //
     toggleTextAlert() {
-      this.$store.dispatch("toggleTextAlert", this.profile);
+      this.profile.textEnabled = !this.profile.textEnabled;
+      this.$store.dispatch("updateProfile", this.profile);
     },
   },
   components: {

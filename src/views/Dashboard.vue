@@ -81,7 +81,7 @@ import SaleManager from "../components/dashboard/SaleManager";
 export default {
   data() {
     return {
-      activeTool: null,
+      activeTool: "Account",
     };
   },
   computed: {

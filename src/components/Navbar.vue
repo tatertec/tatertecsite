@@ -30,11 +30,12 @@
                 <router-link to="About">ABOUT</router-link>
               </a>
             </li>
-            <li class="nav-item">
+            <!-- NOTE this is the link for portfolio when we have some stuff to add uncomment it -->
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#">
                 <router-link to="Portfolio">PORTFOLIO</router-link>
               </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" href="#">
                 <router-link to="Services">SERVICES</router-link>

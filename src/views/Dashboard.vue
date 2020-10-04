@@ -2,19 +2,16 @@
   <div class="row">
     <div class="col-12 p-0 bg-secondary">
       <div v-if="!$auth.isAuthenticated" class="row p-0 m-0">
-        <div class="col-12 p-0 text-center bg-light">
-          <h1 class="text-primary">Login to continue</h1>
-        </div>
-        <div class="col-12 p-0">
-          <div class="text-center py-5">d</div>
-        </div>
+        <Loading />
       </div>
       <div v-else class="row p-0 m-0">
         <div class="col-12 p-0 text-center bg-light">
           <h1 class="text-primary py-5">Dashboard</h1>
         </div>
 
-        <div class="col-12 bg-secondary d-flex py-3 justify-content-start px-5">
+        <div
+          class="col-12 d-flex bg-secondary d-md-none py-3 justify-content-center"
+        >
           <div class="dropdown mx-5">
             <div
               type="button"
@@ -31,12 +28,13 @@
               class="dropdown-menu p-0 m-0"
               aria-labelledby="dropdownMenuOffset"
             >
-              <span @click="setTool('Portfolio')" class="action dropdown-item">
+             <!--NOTE when added uncomment these links  -->
+              <!-- <span @click="setTool('Portfolio')" class="action dropdown-item">
                 Portfolio
               </span>
               <span @click="setTool('Sale')" class="action dropdown-item"
                 >Sale</span
-              >
+              > -->
 
               <span @click="setTool('Messages')" class="action dropdown-item"
                 >Messages</span
@@ -45,6 +43,24 @@
                 >Account</span
               >
             </div>
+          </div>
+        </div>
+        <div class="col-12 justify-content-end d-none d-md-flex py-5">
+
+         <!--NOTE when added uncomment these links  -->
+            <!-- <span @click="setTool('Portfolio')" class="action px-4 link ">
+              Portfolio
+            </span>
+            <span @click="setTool('Sale')" class="action px-4 link "
+              >Sale</span
+            > -->
+
+            <span @click="setTool('Messages')" class="action px-4 link "
+              >Messages</span
+            >
+            <span @click="setTool('Account')" class="action px-4 link "
+              >Account</span
+            >
           </div>
         </div>
         <div class="col-12">
@@ -77,6 +93,7 @@ import AccountManager from "../components/dashboard/AccountManager";
 import MessageManager from "../components/dashboard/MessageManager";
 import PortfolioManager from "../components/dashboard/PortfolioManager";
 import SaleManager from "../components/dashboard/SaleManager";
+import Loading from "../components/Loading";
 
 export default {
   data() {
@@ -100,6 +117,7 @@ export default {
     PortfolioManager,
     SaleManager,
     AccountManager,
+    Loading,
   },
 };
 </script>

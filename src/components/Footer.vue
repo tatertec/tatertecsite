@@ -12,20 +12,16 @@
                   title="2086954231"
                   class="call-btn text-light p-2"
                   href="tel:2086954231"
-                  ><i class="fas fa-phone-alt"></i
+                  ><i class="px-2 px-lg-3 fas fa-phone-alt"></i
                 ></a>
-                208-695-4231
-                <br />
-                <br />
 
                 <a
                   title="tatertec@gmail.com"
                   class="email-btn text-light p-2"
                   :href="`mailto:tatertec@gmail.com?subject = ${siteId}&body = buttonEmail.....`"
                 >
-                  <i class="far fa-envelope"></i>
+                  <i class="px-2 px-lg-3 far fa-envelope link"></i>
                 </a>
-                tatertec@gmail.com
               </h4>
             </div>
           </div>

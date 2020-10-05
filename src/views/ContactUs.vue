@@ -1,11 +1,11 @@
 <template>
   <div class="col-12 p-0">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 bg-secondary">
         <h1 class="text-center text-primary py-5">Give us a call today</h1>
       </div>
     </div>
-    <div class="row bg-secondary py-5">
+    <div class="row bg-light py-5">
       <div class="col-md-6 col-12 p-0">
         <MessageForm />
         <!-- <form class="text-left p-2 form-box card bg-dark text-light shadow m-auto p-1">

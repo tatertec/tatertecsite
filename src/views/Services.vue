@@ -1,7 +1,7 @@
 <template>
   <div class="col-12 p-0">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 bg-secondary">
         <h1 class="text-center text-primary py-5">DESIGN | SEO | MARKETING</h1>
       </div>
 
@@ -59,7 +59,7 @@
       </div>
     </div>
 
-    <div class="row bg-secondary d-flex justify-content-around">
+    <div class="row bg-light d-flex justify-content-around">
       <div class="col-12">
         <h2 class="pt-4">Web design and hosting</h2>
       </div>

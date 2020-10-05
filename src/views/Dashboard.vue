@@ -1,11 +1,11 @@
 <template>
   <div class="row">
-    <div class="col-12 p-0 bg-secondary">
+    <div class="col-12 p-0 bg-light">
       <div v-if="!$auth.isAuthenticated" class="row p-0 m-0">
         <Loading />
       </div>
       <div v-else class="row p-0 m-0">
-        <div class="col-12 p-0 text-center bg-light">
+        <div class="col-12 p-0 text-center bg-secondary">
           <h1 class="text-primary py-5">Dashboard</h1>
         </div>
 
@@ -28,7 +28,7 @@
               class="dropdown-menu p-0 m-0"
               aria-labelledby="dropdownMenuOffset"
             >
-             <!--NOTE when added uncomment these links  -->
+              <!--NOTE when added uncomment these links  -->
               <!-- <span @click="setTool('Portfolio')" class="action dropdown-item">
                 Portfolio
               </span>
@@ -46,49 +46,47 @@
           </div>
         </div>
         <div class="col-12 justify-content-end d-none d-md-flex py-5">
-
-         <!--NOTE when added uncomment these links  -->
-            <!-- <span @click="setTool('Portfolio')" class="action px-4 link ">
+          <!--NOTE when added uncomment these links  -->
+          <!-- <span @click="setTool('Portfolio')" class="action px-4 link ">
               Portfolio
             </span>
             <span @click="setTool('Sale')" class="action px-4 link "
               >Sale</span
             > -->
 
-            <span @click="setTool('Messages')" class="action px-4 link "
-              >Messages</span
-            >
-            <span @click="setTool('Account')" class="action px-4 link "
-              >Account</span
-            >
-          </div>
+          <span @click="setTool('Messages')" class="action px-4 link"
+            >Messages</span
+          >
+          <span @click="setTool('Account')" class="action px-4 link"
+            >Account</span
+          >
         </div>
-        <div class="col-12">
-          <div v-if="this.activeTool === 'Messages'">
-            <MessageManager />
-          </div>
+      </div>
+      <div class="col-12">
+        <div v-if="this.activeTool === 'Messages'">
+          <MessageManager />
         </div>
-        <div class="col-12">
-          <div v-if="this.activeTool === 'Portfolio'">
-            <PortfolioManager />
-          </div>
+      </div>
+      <div class="col-12">
+        <div v-if="this.activeTool === 'Portfolio'">
+          <PortfolioManager />
         </div>
-        <div class="col-12">
-          <div v-if="this.activeTool === 'Sale'">
-            <SaleManager />
-          </div>
+      </div>
+      <div class="col-12">
+        <div v-if="this.activeTool === 'Sale'">
+          <SaleManager />
         </div>
-        <div class="col-12">
-          <div v-if="this.activeTool === 'Account'">
-            <AccountManager />
-          </div>
+      </div>
+      <div class="col-12">
+        <div v-if="this.activeTool === 'Account'">
+          <AccountManager />
         </div>
       </div>
     </div>
   </div>
 </template>
 
-// <script>
+ <script>
 import AccountManager from "../components/dashboard/AccountManager";
 import MessageManager from "../components/dashboard/MessageManager";
 import PortfolioManager from "../components/dashboard/PortfolioManager";

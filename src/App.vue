@@ -49,8 +49,7 @@ h2 {
 body {
   font-family: "Nanum Gothic", sans-serif;
 }
-
 a {
-  color: rgb(0, 0, 0);
+  text-decoration: none;
 }
 </style>

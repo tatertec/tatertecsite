@@ -1,7 +1,7 @@
 <template>
   <div class="col-12 p-0">
-    <div class="row px-3 px-lg-5">
-      <div class="col-12">
+    <div class="row bg-secondary">
+      <div class="col-12 p-0">
         <h1 class="text-center text-primary py-5">Custom digital solutions</h1>
       </div>
     </div>
@@ -12,15 +12,15 @@
           We build, host, and maintain, beautiful mobile-friendly sites.
         </p>
 
-        <h4 class="text-primary p-2 m-0">site management tools</h4>
+        <h4 class="text-primary p-2 m-0">Site management tools</h4>
         <p class="px-3 m-0">
-          We provide tools to help you maintain your site or run e-mail
-          marketing campaigns.
+          We provide a bunch of tools to maintain and update your website
+          content.
         </p>
         <h4 class="text-primary p-2 m-0">PPC ( pay per click ) advertizing</h4>
         <p class="px-3 m-0">
-          We can properly optimize your ad campaign. Through social media and
-          search engines
+          We can optimize your ad campaign. Through social media and search
+          engines.
         </p>
       </div>
       <div class="p-0 col-12 col-lg-6 text-light m-auto">
@@ -46,29 +46,33 @@
             alt
           />
         </div>
-        <h4 class="text-primary p-2 py-lg-4 m-0">
-          a plan tailored to your business
-        </h4>
+        <h3 class="text-dark p-2 py-lg-4 m-0">
+          A plan tailored to your business.
+        </h3>
 
         <p>
           We provide a free consultation to talk about your companies needs. Not
-          everyone's situation is the same. we want to take the time to see how
-          we can best help you accomplish your goals. We provide an array of
-          services to make this process easy and fit any budget.
+          everyone's situation is the same. We take the time to see how we can
+          best help you accomplish your goals. We provide an array of services
+          to help any size business accomplish there goals.
         </p>
       </div>
       <div class="spacer-top-2 col-12 col-lg-6 order-1 order-lg-2">
-        <h4 class="text-primary m-0">Cementing your digital precence</h4>
+        <h3 class="text-dark m-0">Cementing your digital precence</h3>
 
         <p class="px-3 m-0">
-          Navigating the online world can be intimidating and take time. We
-          provide an array of services to make this process easy and fit any
-          budget. Just getting started or growing your company we can create a
-          plan to suit your needs.
+          Every bussiness can benifit from having a social media account, google
+          bussiness listing, yelp ect. We can help set up and optomize every
+          aspect of your digital presence and link all of your accounts. Having
+          a website in 2020 is like having business card. It helps you come off
+          more profesinal and is a great place to show off your bussness where
+          anyone can find it. You can also use your site to drive sales with the
+          power of PPC(pay per click) advertizing email marketing or text
+          marketing.
         </p>
       </div>
     </div>
-    <div class="row bg-secondary py-3 my-3">
+    <div class="row bg-secondary">
       <div class="col-lg-6 col-12 p-0">
         <MessageForm />
         <!-- <form class="d-flex justify-content-center align-items-center p-lg-4">

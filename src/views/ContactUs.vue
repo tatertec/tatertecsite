@@ -1,25 +1,13 @@
 <template>
   <div class="col-12 p-0">
     <div class="row">
-      <div class="col-12 bg-secondary">
-        <h1 class="text-center text-primary py-5">Give us a call today</h1>
+      <div class="col-12 bg-light">
+        <h1 class="text-center py-5">Give us a call today</h1>
       </div>
     </div>
     <div class="row bg-light py-5">
       <div class="col-md-6 col-12 p-0">
         <MessageForm />
-        <!-- <form class="text-left p-2 form-box card bg-dark text-light shadow m-auto p-1">
-          <h2 class="text-primary">Send us a message.</h2>
-          <label class="label" for="name">Name</label>
-          <input class="w-100" type="text" />
-          <br />
-          <label class="label" for="name">E-mail</label>
-          <input class="w-100" type="text" />
-          <br />
-          <label class="label" for="name">Message</label>
-          <textarea class="w-100" type="text" rows="8" />
-          <button class="btn btn-info text-light mt-5 py-2 my-4">Submit</button>
-        </form> -->
       </div>
       <div class="col-md-6 col-12 py-5 px-5">
         <h4 class="text-primary">Sales</h4>

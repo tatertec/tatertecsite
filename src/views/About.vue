@@ -1,8 +1,8 @@
 <template>
   <div class="col-12 p-0">
     <div class="row">
-      <div class="col-12 p-0 bg-secondary">
-        <h1 class="text-center text-primary py-5">Meet our team</h1>
+      <div class="col-12 p-0 bg-light">
+        <h1 class="text-center py-5">Meet our team</h1>
       </div>
 
       <div class="col-12 bg-dark text-primary py-4 col-md-6 p-0">

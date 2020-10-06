@@ -1,8 +1,8 @@
 <template>
   <div class="col-12 p-0">
-    <div class="row bg-secondary">
+    <div class="row bg-light">
       <div class="col-12 p-0">
-        <h1 class="text-center text-primary py-5">Custom digital solutions</h1>
+        <h1 class="text-center py-5">Custom digital solutions</h1>
       </div>
     </div>
     <div class="row bg-dark px-3 px-lg-5">

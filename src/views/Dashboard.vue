@@ -5,7 +5,7 @@
         <Loading />
       </div>
       <div v-else class="row p-0 m-0">
-        <div class="col-12 p-0 text-center bg-secondary">
+        <div class="col-12 p-0 text-center bg-light">
           <h1 class="text-primary py-5">Dashboard</h1>
         </div>
 

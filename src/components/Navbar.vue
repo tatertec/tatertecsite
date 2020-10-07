@@ -124,22 +124,18 @@ a :hover {
 }
 .nav.authin {
   transition: 0.2s;
-  color: rgb(32, 214, 32);
-  border-bottom: 1px solid rgb(241, 206, 47);
+  color: rgb(246, 246, 246);
+  /* border-bottom: 1px solid rgb(241, 206, 47); */
 }
 .nav.authin:hover {
   transition: 0.2s;
   color: rgb(72, 255, 72);
-  border-bottom: 7px solid rgb(60, 226, 60);
 }
 .nav.authout {
   transition: 0.2s;
-  color: rgb(195, 29, 29);
-  border-bottom: 1px solid rgb(241, 206, 47);
 }
 .nav.authout:hover {
   transition: 0.2s;
   color: rgb(255, 51, 51);
-  border-bottom: 7px solid rgb(245, 29, 29);
 }
 </style>

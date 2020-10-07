@@ -73,37 +73,10 @@
       </div>
     </div>
     <div class="row bg-secondary">
-      <div class="col-lg-6 col-12 p-0">
+      <div class="col-12 m-auto p-0">
         <MessageForm />
-        <!-- <form class="d-flex justify-content-center align-items-center p-lg-4">
-          <div class="bg-dark shadow text-primary form-container">
-            <h4>Get in touch</h4>
-            <label class="m-0 pt-2 text-light">Name</label>
-            <br />
-            <input v-model="senderName" class="p-1 w-100" type="text" />
-            <br />
-            <label class="m-0 pt-2 text-light">E-mail</label>
-            <br />
-            <input v-model="senderEmail" class="p-1 w-100" type="text" />
-            <br />
-            <label class="m-0 pt-2 text-light">Phone number</label>
-            <br />
-            <input v-model="senderPhoneNumber" class="p-1 w-100" type="text" />
-            <br />
-            <label class="m-0 pt-2 text-light">Message</label>
-            <br />
-            <textarea v-model="body" class="p-1 w-100" rows="5"></textarea>
-            <br />
-            <button
-              @click="submitMessageForm"
-              class="btn btn-primary mt-3 px-5"
-            >
-              Send message
-            </button>
-          </div>
-        </form> -->
       </div>
-      <div class="col-lg-6 col-12 p-0">
+      <!-- <div class="col-lg-6 col-12 p-0">
         <form
           class="d-flex justify-content-center align-items-center py-4 p-lg-4"
         >
@@ -111,7 +84,7 @@
             <MailJoinForm />
           </div>
         </form>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

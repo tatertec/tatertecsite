@@ -1,11 +1,14 @@
 <template>
   <div class="col-12 p-0">
     <div class="row bg-light">
-      <div class="col-12 p-0">
-        <h1 class="text-center py-5">Custom digital solutions</h1>
+      <div class="col-12 p-0 slant-1 text-primary text-center py-5">
+        <h1 class="text-center py-5">
+          Digital solutions tailored to your business
+        </h1>
       </div>
     </div>
-    <div class="row bg-dark px-3 px-lg-5">
+
+    <!-- <div class="row bg-dark px-3 px-lg-5">
       <div class="p-0 col-12 col-lg-6 py-4 text-light m-auto">
         <h4 class="text-primary p-2 m-0">Web Design</h4>
         <p class="px-3 m-0">
@@ -34,18 +37,23 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="row">
-      <div
-        class="col-12 col-lg-6 d-flex justify-content-center py-4 order-2 order-lg-1 d-flex flex-column"
-      >
-        <div class="img-container-1">
-          <img
-            class="img-fluid shadow"
-            src="https://www.smeventure.com/wp-content/uploads/2018/11/cloud-computing.jpeg"
-            alt
-          />
-        </div>
+      <div class="col-lg-6 offset-lg-6 col-12 p-0 img-1">
+        <img
+          class="img-fluid shadow"
+          src="https://images.unsplash.com/photo-1465244554671-e501f19a3bb3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+          alt
+        />
+      </div>
+
+      <div class="col-12">
+        <img
+          class="img-fluid shadow"
+          src="https://www.smeventure.com/wp-content/uploads/2018/11/cloud-computing.jpeg"
+          alt
+        />
+
         <h3 class="text-dark p-2 py-lg-4 m-0">
           A plan tailored to your business.
         </h3>
@@ -58,7 +66,7 @@
         </p>
       </div>
       <div class="spacer-top-2 col-12 col-lg-6 order-1 order-lg-2">
-        <h3 class="text-dark m-0">Cementing your digital precence</h3>
+        <h3 class="text-dark m-0">More than a web design</h3>
 
         <p class="px-3 m-0">
           Every bussiness can benifit from having a social media account, google
@@ -96,15 +104,7 @@ export default {
   name: "Home",
 
   data() {
-    return {
-      //note form data
-      // senderName: "",
-      // senderEmail: "",
-      // senderPhoneNumber: "",
-      // body: "",
-      //note email list data
-      clubEmail: "",
-    };
+    return {};
   },
 
   methods: {
@@ -125,6 +125,18 @@ export default {
 </script>
 
 <style>
+.slant-1 {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(39, 39, 39, 0.465),
+    rgba(39, 39, 39, 0.986)
+  );
+
+  height: 650px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 66%, 0 100%);
+}
+
 .img-container-1 {
   overflow: hidden;
   max-height: 450px;
@@ -139,8 +151,7 @@ export default {
 }
 .img-1 {
   position: absolute;
-  max-height: 450px;
-  bottom: -20rem;
+  top: 15rem;
 }
 .img-2 {
   max-height: 450px;
@@ -150,8 +161,23 @@ export default {
   padding-top: 14rem;
 }
 @media only screen and (max-width: 992px) {
+  .img-1 {
+    position: absolute;
+    top: 5rem;
+  }
   .drop-img {
     max-height: 300px;
+  }
+  .slant-1 {
+    background-image: linear-gradient(
+      to bottom right,
+      rgba(39, 39, 39, 0.465),
+      rgba(39, 39, 39, 0.986)
+    );
+
+    height: 500;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
   }
   .img-1 {
     max-height: 500px;

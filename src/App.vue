@@ -33,6 +33,27 @@ export default {
 @import "./assets/_overrides.scss";
 </style>
 <style>
+textarea ,input{
+  border: none;
+  
+  background: rgba(0, 0, 0, 0);
+}
+textarea:focus, input:focus{
+  outline:none;
+  background: rgba(0, 0, 0, 0);
+
+}
+.input-box{
+  border-bottom: inset 2px black;
+  min-width: 400px;
+  max-width: 650px;
+  width: 85%;
+}
+.form-container {
+  width: 500px;
+
+  padding: 2rem;
+}
 #app {
   display: flex;
   flex-direction: column;
